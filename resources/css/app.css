@@ -18,10 +18,28 @@
     --color-text-muted: #71717A;
 }
 
+/* Universal Base Resets (guarantees cross-browser styling on all mobile devices) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     background-color: #080B18;
     color: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    background-color: #080B18;
+    color: #FFFFFF;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* Glassmorphism Styles */
