@@ -1,0 +1,240 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+@source '../../app/Livewire/**/*.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    --color-bg-primary: #080B18;
+    --color-bg-secondary: #111426;
+    --color-bg-surface: #171B33;
+    --color-accent-primary: #8B5CF6;
+    --color-accent-secondary: #EC4899;
+    --color-accent-cyan: #06D4F4;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #A1A1AA;
+    --color-text-muted: #71717A;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #080B18;
+    color: #FFFFFF;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+    background: rgba(17, 20, 38, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+    background: linear-gradient(135deg, rgba(23, 27, 51, 0.75) 0%, rgba(17, 20, 38, 0.6) 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(139, 92, 246, 0.18);
+    box-shadow: 0 10px 30px -10px rgba(8, 11, 24, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+    border-color: rgba(236, 72, 153, 0.45);
+    box-shadow: 0 20px 40px -15px rgba(236, 72, 153, 0.25), 0 0 25px -5px rgba(139, 92, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
+}
+
+.glass-input {
+    background: rgba(17, 20, 38, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    backdrop-filter: blur(8px);
+    transition: all 0.25s ease;
+}
+
+.glass-input:focus {
+    outline: none;
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25), 0 0 15px rgba(236, 72, 153, 0.2);
+    background: rgba(23, 27, 51, 0.9);
+}
+
+/* Neon Glows & Gradients */
+.glow-primary {
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.45), 0 0 15px rgba(236, 72, 153, 0.3);
+}
+
+.glow-text {
+    text-shadow: 0 0 20px rgba(236, 72, 153, 0.5), 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #FFFFFF 15%, #C4B5FD 55%, #EC4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-accent-text {
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #06D4F4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-btn {
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+    box-shadow: 0 8px 25px -6px rgba(139, 92, 246, 0.5), 0 4px 15px -4px rgba(236, 72, 153, 0.4);
+    transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+    background: linear-gradient(135deg, #9F75FF 0%, #F472B6 100%);
+    box-shadow: 0 12px 30px -4px rgba(236, 72, 153, 0.65), 0 6px 20px -2px rgba(139, 92, 246, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Floating Bird Animation */
+.bird-container {
+    position: absolute;
+    top: 15%;
+    left: -10%;
+    transform: scale(0) translateX(-10vw);
+    opacity: 0;
+    animation-name: fly-across;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.bird-container-1 {
+    animation-duration: 24s;
+    animation-delay: 2s;
+    top: 18%;
+}
+
+.bird-container-2 {
+    animation-duration: 28s;
+    animation-delay: 14s;
+    top: 32%;
+    transform: scale(0.75);
+}
+
+.bird-container-3 {
+    animation-duration: 20s;
+    animation-delay: 8s;
+    top: 48%;
+    transform: scale(0.6);
+}
+
+@keyframes fly-across {
+    0% {
+        transform: translateY(0vh) translateX(-10vw) scale(0.6);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-4vh) translateX(55vw) scale(0.7);
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-8vh) translateX(115vw) scale(0.6);
+        opacity: 0;
+    }
+}
+
+.bird {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23EC4899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h.01"/><path d="M3.4 18c4.6-2.5 8.6-4.5 13.6-4.5 1 0 2 .2 3 .5-1.5-2.5-3.5-4-7-4-3 0-5 1.5-8 4.5"/><path d="m14 13-3-9"/></svg>');
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: flap-wing 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes flap-wing {
+    0% {
+        transform: scaleY(1) rotate(5deg);
+    }
+
+    100% {
+        transform: scaleY(0.55) rotate(-5deg);
+    }
+}
+
+/* Ambient Background Glow Orbs */
+.ambient-glow-1 {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0) 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+    animation: pulse-glow 9s ease-in-out infinite alternate;
+}
+
+.ambient-glow-2 {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.16) 0%, rgba(236, 72, 153, 0) 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+    animation: pulse-glow 11s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes pulse-glow {
+    0% {
+        transform: scale(0.9) translate(0, 0);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1.15) translate(30px, -20px);
+        opacity: 1;
+    }
+}
+
+/* Floating Particles Canvas */
+#particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .bird-container,
+    #particles-canvas {
+        display: none !important;
+    }
+}
