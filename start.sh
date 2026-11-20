@@ -4,6 +4,15 @@ set -e
 # Run storage link if not created
 php artisan storage:link || true
 
+# If using sqlite or no DB_HOST set, fallback safely to local sqlite
+if [ "$DB_CONNECTION" = "sqlite" ] || [ -z "$DB_HOST" ]; then
+    echo "Configuring SQLite database..."
+    mkdir -p database
+    touch database/database.sqlite
+    export DB_CONNECTION=sqlite
+    export DB_DATABASE=/app/database/database.sqlite
+fi
+
 # Run database migrations and seeders if enabled
 if [ "$RUN_MIGRATIONS" = "true" ] || [ "$RUN_MIGRATIONS" = "1" ]; then
     echo "Running database migrations..."

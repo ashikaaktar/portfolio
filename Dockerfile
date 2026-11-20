@@ -14,8 +14,9 @@ RUN apk add --no-cache \
     libzip-dev \
     linux-headers \
     mysql-client \
+    sqlite-dev \
     && docker-php-ext-configure intl \
-    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd intl zip opcache
+    && docker-php-ext-install pdo pdo_mysql pdo_sqlite mbstring exif pcntl bcmath gd intl zip opcache
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
