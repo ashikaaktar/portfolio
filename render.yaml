@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: ashika-portfolio
+    name: ashikaaktar-portfolio
     env: docker
     plan: free
     region: singapore
