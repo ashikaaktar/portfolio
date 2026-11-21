@@ -20,6 +20,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Use relative asset paths for Vite so CSS/JS load seamlessly across localhost, tunnels, and custom domains without Mixed Content blocks
+        \Illuminate\Support\Facades\Vite::createAssetPathsUsing(function ($path) {
+            return '/' . ltrim($path, '/');
+        });
+
         if (request()->isSecure() ||
             request()->header('x-forwarded-proto') === 'https' ||
             request()->server('HTTP_X_FORWARDED_PROTO') === 'https' ||
