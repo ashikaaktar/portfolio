@@ -92,10 +92,24 @@ foreach ($urlsToCrawl as $path => $destFile) {
         $html
     );
 
-    // Inject WhatsApp submit handler for static contact form
+    // Remove broken Livewire 404 scripts on static export
+    $html = preg_replace('#<script src="[^"]*livewire[^"]*"[^>]*></script>#i', '', $html);
+
+    // Inject Alpine.js and Lucide Icons CDN so mobile menu, icons, and interactions work 100% on static export
+    $headInject = <<<HTML
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+HTML;
+    $html = str_replace('</head>', $headInject, $html);
+
+    // Inject WhatsApp submit handler for static contact form and initialize Lucide icons
     $contactScript = <<<HTML
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    if (window.lucide) {
+        lucide.createIcons();
+    }
     var form = document.querySelector('form');
     if (form) {
         form.addEventListener('submit', function(e) {
