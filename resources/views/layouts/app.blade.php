@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth overflow-x-hidden w-full max-w-full">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -36,14 +36,9 @@
     @livewireStyles
 
     <style>
-        html, body {
-            overflow-x: hidden !important;
-            max-width: 100vw !important;
-            width: 100% !important;
-            position: relative;
-        }
         body {
             font-family: 'Plus Jakarta Sans', {{ app()->getLocale() === 'bn' ? "'Hind Siliguri'," : "" }} system-ui, sans-serif;
+            overflow-x: hidden;
         }
         a {
             color: inherit;
@@ -68,7 +63,7 @@
     }
     </script>
 </head>
-<body class="bg-[#080B18] text-[#FFFFFF] antialiased overflow-x-hidden w-full max-w-full selection:bg-[#8B5CF6] selection:text-white relative min-h-screen">
+<body class="bg-[#080B18] text-[#FFFFFF] antialiased overflow-x-hidden selection:bg-[#8B5CF6] selection:text-white relative min-h-screen">
 
     <!-- Decorative Background FX Layer (Strictly contained to prevent horizontal scroll / cut-off) -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none z-0 w-full h-full">
