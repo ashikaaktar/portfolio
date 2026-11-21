@@ -31,54 +31,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Universal Cross-Device Tailwind Engine (ensures 100% pixel-perfect styling on all mobile phones & browsers) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        bgPrimary: '#080B18',
-                        bgSecondary: '#111426',
-                        bgSurface: '#171B33',
-                        accentPrimary: '#8B5CF6',
-                        accentSecondary: '#EC4899',
-                        accentCyan: '#06D4F4',
-                    }
-                }
-            }
-        }
-    </script>
-
     <!-- Vite Styles & Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 
     <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
+        body {
+            font-family: 'Plus Jakarta Sans', {{ app()->getLocale() === 'bn' ? "'Hind Siliguri'," : "" }} system-ui, sans-serif;
         }
         a {
             color: inherit;
             text-decoration: none;
-        }
-        body {
-            font-family: 'Plus Jakarta Sans', {{ app()->getLocale() === 'bn' ? "'Hind Siliguri'," : "" }} system-ui, sans-serif;
-            background-color: #080B18;
-            color: #FFFFFF;
-            margin: 0;
-        }
-        .hidden {
-            display: none;
-        }
-        @media (max-width: 767px) {
-            .md\:flex {
-                display: none !important;
-            }
-            .md\:hidden {
-                display: flex !important;
-            }
         }
     </style>
 

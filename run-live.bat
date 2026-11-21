@@ -6,7 +6,7 @@ echo ========================================================
 echo.
 echo [1/2] Starting local background services...
 start "" "C:\xampp\mysql\bin\mysqld.exe" --defaults-file="C:\xampp\mysql\bin\my.ini" --standalone
-start "" "C:\xampp\php\php.exe" -S 127.0.0.1:8005 server.php
+start "" "C:\xampp\php\php.exe" -S 127.0.0.1:8005 -t public server.php
 timeout /t 3 /nobreak >nul
 echo.
 echo [2/2] Launching Cloudflare Live Public Tunnel...
