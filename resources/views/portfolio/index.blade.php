@@ -5,53 +5,53 @@
 
 @section('content')
     <!-- 4.1 HERO SECTION -->
-    <section id="home" class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
+    <section id="home" class="relative pt-6 pb-14 sm:pt-12 sm:pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-                <!-- Hero Left: Text & CTAs -->
-                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+                <!-- Hero Left: Text & CTAs (Left-aligned on all screen sizes for sharp, high-tech modern aesthetic) -->
+                <div class="lg:col-span-7 text-left space-y-4 sm:space-y-6">
                     <!-- Status Badge -->
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-[#8B5CF6]/30 text-xs font-semibold text-[#8B5CF6]">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full glass-panel border border-[#8B5CF6]/30 text-[11px] sm:text-xs font-semibold text-[#8B5CF6]">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                         <span>{{ __('portfolio.hero.badge') }}</span>
                     </div>
 
                     <!-- Main Headline -->
-                    <div class="space-y-2">
-                        <p class="text-sm sm:text-base font-semibold tracking-wider uppercase text-[#EC4899]">
+                    <div class="space-y-1.5">
+                        <p class="text-xs sm:text-base font-semibold tracking-wider uppercase text-[#EC4899]">
                             {{ __('portfolio.hero.greeting') }} <span class="text-white font-bold">Ashika</span>
                         </p>
-                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15]">
+                        <h1 class="text-2xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.18] sm:leading-[1.15]">
                             <span class="gradient-text">{{ $profile->headline }}</span>
                         </h1>
                     </div>
 
                     <!-- Tagline / Intro -->
-                    <p class="text-sm sm:text-base lg:text-lg text-[#A1A1AA] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    <p class="text-xs sm:text-base lg:text-lg text-[#A1A1AA] max-w-2xl leading-relaxed">
                         {{ $profile->tagline }}
                     </p>
 
                     <!-- CTAs & WhatsApp -->
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#portfolio" class="px-7 py-3.5 rounded-xl gradient-btn font-bold text-sm text-white shadow-lg shadow-[#8B5CF6]/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                    <div class="flex flex-wrap items-center justify-start gap-2.5 sm:gap-4 pt-1 sm:pt-2">
+                        <a href="#portfolio" class="px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl gradient-btn font-bold text-xs sm:text-sm text-white shadow-lg shadow-[#8B5CF6]/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
                             <span>{{ __('portfolio.hero.view_work') }}</span>
-                            <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+                            <i data-lucide="arrow-down-right" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
                         </a>
 
-                        <a href="#contact" class="px-7 py-3.5 rounded-xl glass-panel font-bold text-sm text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 active:scale-95 transition-all flex items-center gap-2">
-                            <i data-lucide="mail" class="w-4 h-4 text-[#8B5CF6]"></i>
+                        <a href="#contact" class="px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl glass-panel font-bold text-xs sm:text-sm text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 active:scale-95 transition-all flex items-center gap-2">
+                            <i data-lucide="mail" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8B5CF6]"></i>
                             <span>{{ __('portfolio.hero.contact_me') }}</span>
                         </a>
 
-                        <a href="{{ $profile->whatsapp_link ?: 'https://wa.me/8801938267920' }}" target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-xl bg-emerald-600/20 border border-emerald-500/30 hover:bg-emerald-600/30 font-semibold text-sm text-emerald-300 flex items-center gap-2 transition">
-                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                        <a href="{{ $profile->whatsapp_link ?: 'https://wa.me/8801938267920' }}" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-emerald-600/20 border border-emerald-500/30 hover:bg-emerald-600/30 font-semibold text-xs sm:text-sm text-emerald-300 flex items-center gap-2 transition">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400"></i>
                             <span>WhatsApp</span>
                         </a>
                     </div>
 
                     <!-- Social Icons Strip -->
-                    <div class="pt-4 flex items-center justify-center lg:justify-start gap-3">
-                        <span class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+                    <div class="pt-2 sm:pt-4 flex items-center justify-start gap-2.5 sm:gap-3">
+                        <span class="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
                             {{ app()->getLocale() === 'bn' ? 'কানেক্ট:' : 'Connect:' }}
                         </span>
                         @foreach ($socialLinks as $link)
@@ -60,51 +60,51 @@
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 title="{{ $link->platform }}"
-                                class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 transition">
-                                <i data-lucide="{{ $link->icon ?: 'external-link' }}" class="w-4 h-4"></i>
+                                class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 transition">
+                                <i data-lucide="{{ $link->icon ?: 'external-link' }}" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
                             </a>
                         @endforeach
                     </div>
                 </div>
 
                 <!-- Hero Right: Futuristic Glassmorphism Profile Avatar Card -->
-                <div class="lg:col-span-5 flex justify-center relative">
+                <div class="lg:col-span-5 flex justify-center relative mt-4 sm:mt-6 lg:mt-0">
                     <!-- Rotating Glowing Neon Rings Behind -->
                     <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#8B5CF6]/30 to-[#EC4899]/25 blur-2xl transform scale-110"></div>
                     
-                    <div class="relative w-full max-w-sm sm:max-w-md rounded-3xl p-1 bg-gradient-to-b from-[#8B5CF6]/40 via-[#EC4899]/15 to-transparent shadow-2xl">
-                        <div class="rounded-[22px] glass-panel p-6 sm:p-8 backdrop-blur-2xl relative overflow-hidden">
+                    <div class="relative w-full max-w-xs sm:max-w-md rounded-3xl p-1 bg-gradient-to-b from-[#8B5CF6]/40 via-[#EC4899]/15 to-transparent shadow-2xl">
+                        <div class="rounded-[22px] glass-panel p-5 sm:p-8 backdrop-blur-2xl relative overflow-hidden">
                             <!-- Top Card Header -->
-                            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
-                                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-                                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                            <div class="flex items-center justify-between pb-3 sm:pb-4 border-b border-white/10 mb-4 sm:mb-6">
+                                <div class="flex items-center gap-1.5 sm:gap-2">
+                                    <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-rose-500/80"></span>
+                                    <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-500/80"></span>
+                                    <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-500/80"></span>
                                 </div>
-                                <span class="text-[11px] font-mono text-[#EC4899] bg-[#111426] px-2.5 py-1 rounded-md border border-[#8B5CF6]/30">
+                                <span class="text-[10px] sm:text-[11px] font-mono text-[#EC4899] bg-[#111426] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md border border-[#8B5CF6]/30">
                                     ashika.dev
                                 </span>
                             </div>
 
                             <!-- Visual Avatar / Badge -->
-                            <div class="relative mx-auto w-44 h-44 sm:w-52 sm:h-52 rounded-2xl overflow-hidden mb-6 p-1 bg-gradient-to-tr from-[#8B5CF6] to-[#EC4899] shadow-xl group">
+                            <div class="relative mx-auto w-36 h-36 sm:w-52 sm:h-52 rounded-2xl overflow-hidden mb-4 sm:mb-6 p-1 bg-gradient-to-tr from-[#8B5CF6] to-[#EC4899] shadow-xl group">
                                 <div class="w-full h-full rounded-[14px] overflow-hidden bg-slate-900 relative flex items-center justify-center">
                                     @if ($profile->profile_image)
                                         <img src="{{ asset('storage/' . $profile->profile_image) }}" alt="Ashika" class="w-full h-full object-cover">
                                     @else
                                         <!-- High-Tech Futuristic Graphic Avatar -->
-                                        <div class="w-full h-full bg-gradient-to-b from-[#171B33] to-[#080B18] flex flex-col items-center justify-center text-center p-4">
-                                            <div class="w-20 h-20 rounded-full gradient-btn flex items-center justify-center text-3xl font-extrabold text-white mb-2 shadow-lg shadow-[#8B5CF6]/40">
+                                        <div class="w-full h-full bg-gradient-to-b from-[#171B33] to-[#080B18] flex flex-col items-center justify-center text-center p-3 sm:p-4">
+                                            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full gradient-btn flex items-center justify-center text-2xl sm:text-3xl font-extrabold text-white mb-1.5 sm:mb-2 shadow-lg shadow-[#8B5CF6]/40">
                                                 A
                                             </div>
-                                            <span class="text-sm font-bold text-white">ASHIKA</span>
-                                            <span class="text-[11px] text-[#A1A1AA]">{{ $profile->title }}</span>
+                                            <span class="text-xs sm:text-sm font-bold text-white">ASHIKA</span>
+                                            <span class="text-[10px] sm:text-[11px] text-[#A1A1AA]">{{ $profile->title }}</span>
                                         </div>
                                     @endif
                                     
-                                    <div class="absolute bottom-2 left-2 right-2 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-between text-[11px] text-white">
-                                        <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
-                                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                                    <div class="absolute bottom-2 left-2 right-2 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-between text-[10px] sm:text-[11px] text-white">
+                                        <span class="flex items-center gap-1 sm:gap-1.5 text-emerald-400 font-semibold">
+                                            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-ping"></span>
                                             Online
                                         </span>
                                         <span class="text-[#A1A1AA]">Dhaka, BD</span>
@@ -113,19 +113,19 @@
                             </div>
 
                             <!-- Quick Bio Pill -->
-                            <div class="space-y-3 text-center">
-                                <h3 class="text-lg font-bold text-white">Ashika</h3>
-                                <p class="text-xs text-[#A1A1AA] font-medium">
+                            <div class="space-y-2 sm:space-y-3 text-center">
+                                <h3 class="text-base sm:text-lg font-bold text-white">Ashika</h3>
+                                <p class="text-[11px] sm:text-xs text-[#A1A1AA] font-medium">
                                     {{ $profile->title }}
                                 </p>
-                                <div class="flex items-center justify-center gap-2 pt-2">
-                                    <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                                <div class="flex items-center justify-center gap-1.5 sm:gap-2 pt-1 sm:pt-2">
+                                    <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-[11px] font-semibold bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
                                         Laravel 13
                                     </span>
-                                    <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                    <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-[11px] font-semibold bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
                                         Meta Ads
                                     </span>
-                                    <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426] text-[#06D4F4] border border-[#06D4F4]/30">
+                                    <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-[11px] font-semibold bg-[#111426] text-[#06D4F4] border border-[#06D4F4]/30">
                                         SEO
                                     </span>
                                 </div>
@@ -135,40 +135,40 @@
                 </div>
             </div>
 
-            <!-- Stats Ticker Bar -->
-            <div class="mt-16 pt-8 border-t border-[#8B5CF6]/15 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="glass-card p-5 rounded-2xl">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+            <!-- Stats Ticker Bar (Compact 2x2 on mobile, 4-across on desktop) -->
+            <div class="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-[#8B5CF6]/15 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 text-center">
+                <div class="glass-card p-3.5 sm:p-5 rounded-2xl">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-white mb-0.5 sm:mb-1">
                         <span class="gradient-accent-text">{{ $profile->years_of_experience }}+</span>
                     </div>
-                    <div class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+                    <div class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
                         {{ __('portfolio.hero.years_exp') }}
                     </div>
                 </div>
 
-                <div class="glass-card p-5 rounded-2xl">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+                <div class="glass-card p-3.5 sm:p-5 rounded-2xl">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-white mb-0.5 sm:mb-1">
                         <span class="gradient-accent-text">{{ $profile->completed_projects }}+</span>
                     </div>
-                    <div class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+                    <div class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
                         {{ __('portfolio.hero.projects_done') }}
                     </div>
                 </div>
 
-                <div class="glass-card p-5 rounded-2xl">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+                <div class="glass-card p-3.5 sm:p-5 rounded-2xl">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-white mb-0.5 sm:mb-1">
                         <span class="gradient-accent-text">{{ $profile->happy_clients }}+</span>
                     </div>
-                    <div class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+                    <div class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
                         {{ __('portfolio.hero.happy_clients') }}
                     </div>
                 </div>
 
-                <div class="glass-card p-5 rounded-2xl">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+                <div class="glass-card p-3.5 sm:p-5 rounded-2xl">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-white mb-0.5 sm:mb-1">
                         <span class="gradient-accent-text">{{ $profile->satisfaction_rate }}%</span>
                     </div>
-                    <div class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+                    <div class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
                         {{ __('portfolio.hero.satisfaction') }}
                     </div>
                 </div>
