@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="csrf-token" content="k1qsTfHRJ2DwwFOg3lCks4DlERu1wW2gTScEJBNy">
+
+    <title>ASHIKA – Digital Marketer &amp; Developer | Personal Portfolio</title>
+    <meta name="description" content="আধুনিক ওয়েব ডেভেলপমেন্ট এবং ডাটা-চালিত মার্কেটিং কৌশলের সমন্বয়ে ব্র্যান্ড গ্রোথ ও প্রিমিয়াম ডিজিটাল এক্সপেরিয়েন্স তৈরি করি।">
+    <meta name="keywords" content="Ashika, Digital Marketer, Laravel Developer, SEO, Meta Ads, Google Ads, Full-Stack, Bangladesh">
+    <meta name="author" content="Ashika">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/portfolio/">
+    <meta property="og:title" content="ASHIKA – Digital Marketer &amp; Developer">
+    <meta property="og:description" content="I Build Digital Experiences &amp; Grow Businesses.">
+    <meta property="og:image" content="/portfolio/images/og-cover.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ASHIKA – Digital Marketer &amp; Developer">
+    <meta name="twitter:description" content="I Build Digital Experiences &amp; Grow Businesses.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Vite Styles & Scripts -->
+    <link rel="preload" as="style" href="/portfolio/build/assets/app-Ba46kQdo.css" /><link rel="modulepreload" as="script" href="/portfolio/build/assets/app-CnSSQntg.js" /><link rel="stylesheet" href="/portfolio/build/assets/app-Ba46kQdo.css" data-navigate-track="reload" /><script type="module" src="/portfolio/build/assets/app-CnSSQntg.js" data-navigate-track="reload"></script>    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.list-item][wire\:loading\.list-item], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak="x-cloak"],[x-cloak=""] {display: none !important;}[wire\:cloak="wire:cloak"],[wire\:cloak=""] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', &#039;Hind Siliguri&#039;, system-ui, sans-serif;
+            overflow-x: hidden;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ashika",
+        "jobTitle": "Digital Marketer & Developer",
+        "url": "/portfolio/",
+        "sameAs": [
+            "https://linkedin.com/in/ashika",
+            "https://github.com/ashika",
+            "https://facebook.com/ashika.digital"
+        ],
+        "knowsAbout": ["Digital Marketing", "Web Development", "Laravel", "SEO", "Meta Ads", "Google Ads"]
+    }
+    </script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#080B18] text-[#FFFFFF] antialiased overflow-x-hidden selection:bg-[#8B5CF6] selection:text-white relative min-h-screen">
+
+    <!-- Decorative Background FX Layer (Strictly contained to prevent horizontal scroll / cut-off) -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0 w-full h-full">
+        <!-- Floating Particles Canvas -->
+        <canvas id="particles-canvas" class="w-full h-full"></canvas>
+
+        <!-- Animated Flying Birds -->
+        <div class="bird-container bird-container-1">
+            <div class="bird"></div>
+        </div>
+        <div class="bird-container bird-container-2">
+            <div class="bird"></div>
+        </div>
+        <div class="bird-container bird-container-3">
+            <div class="bird"></div>
+        </div>
+
+        <!-- Ambient Glowing Orbs -->
+        <div class="ambient-glow-1 top-10 left-[-80px]"></div>
+        <div class="ambient-glow-2 top-[35%] right-[-80px]"></div>
+        <div class="ambient-glow-1 bottom-[15%] left-[5%]"></div>
+    </div>
+
+    <!-- Navigation Header -->
+        <header x-data="{ mobileOpen: false, scrolled: false }" 
+            x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 20 })"
+            :class="{ 'bg-[#080B18]/90 backdrop-blur-xl border-b border-[#8B5CF6]/20 py-3 shadow-lg shadow-black/40': scrolled, 'bg-transparent py-5': !scrolled }"
+            class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl gradient-btn flex items-center justify-center font-extrabold text-lg text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-105 transition-transform">
+                        A
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-black tracking-wider text-white flex items-center gap-1">
+                            ASHIKA
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#EC4899] animate-pulse"></span>
+                        </span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-[#EC4899] -mt-1">
+                            মার্কেটার ও ডেভেলপার
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full glass-panel border border-white/10 shadow-inner">
+                    <a href="#home" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                        হোম
+                    </a>
+                    <a href="#about" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                        আমার সম্পর্কে
+                    </a>
+                    <a href="#skills" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                        দক্ষতা
+                    </a>
+                    <a href="#services" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                        সার্ভিসসমূহ
+                    </a>
+                    <a href="#portfolio" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                        পোর্টফোলিও
+                    </a>
+                    <a href="#experience" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                        অভিজ্ঞতা
+                    </a>
+                    <a href="#blog" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                        ব্লগ
+                    </a>
+                    <a href="#contact" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                        যোগাযোগ
+                    </a>
+                </nav>
+
+                <!-- Actions: Language Switcher & Let's Talk Button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <!-- Language Switcher -->
+                    <div class="flex items-center p-1 rounded-xl glass-panel border border-white/10">
+                        <a 
+                            href="/portfolio/" 
+                            class="px-2.5 py-1 rounded-lg text-xs font-bold transition text-[#A1A1AA] hover:text-white">
+                            EN
+                        </a>
+                        <a 
+                            href="/portfolio/bn/" 
+                            class="px-2.5 py-1 rounded-lg text-xs font-bold transition bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white shadow-sm">
+                            বাং
+                        </a>
+                    </div>
+
+                    <!-- Let's Talk CTA -->
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl gradient-btn text-xs font-bold text-white flex items-center gap-1.5 transition">
+                        <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+                        <span>কথা বলুন</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="flex md:hidden items-center gap-2">
+                    <!-- Mobile Language Switcher -->
+                    <div class="flex items-center p-0.5 rounded-lg glass-panel border border-white/10">
+                        <a 
+                            href="/portfolio/" 
+                            class="px-2 py-0.5 rounded text-[11px] font-bold text-[#A1A1AA]">
+                            EN
+                        </a>
+                        <a 
+                            href="/portfolio/bn/" 
+                            class="px-2 py-0.5 rounded text-[11px] font-bold bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white">
+                            বাং
+                        </a>
+                    </div>
+
+                    <button 
+                        @click="mobileOpen = !mobileOpen" 
+                        type="button" 
+                        class="p-2.5 rounded-xl glass-panel text-[#A1A1AA] hover:text-white border border-white/10 focus:outline-none"
+                        aria-label="Toggle navigation menu">
+                        <i x-show="!mobileOpen" data-lucide="menu" class="w-5 h-5"></i>
+                        <i x-show="mobileOpen" data-lucide="x" class="w-5 h-5" style="display: none;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div 
+            x-show="mobileOpen" 
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-4"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-4"
+            @click.away="mobileOpen = false" 
+            class="md:hidden glass-panel border-b border-[#8B5CF6]/20 px-6 py-6 mt-3 space-y-3 shadow-2xl"
+            style="display: none;">
+            <a @click="mobileOpen = false" href="#home" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+                হোম
+            </a>
+            <a @click="mobileOpen = false" href="#about" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+                আমার সম্পর্কে
+            </a>
+            <a @click="mobileOpen = false" href="#skills" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+                দক্ষতা
+            </a>
+            <a @click="mobileOpen = false" href="#services" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+                সার্ভিসসমূহ
+            </a>
+            <a @click="mobileOpen = false" href="#portfolio" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+                পোর্টফোলিও
+            </a>
+            <a @click="mobileOpen = false" href="#experience" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+                অভিজ্ঞতা
+            </a>
+            <a @click="mobileOpen = false" href="#blog" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+                ব্লগ
+            </a>
+            <a @click="mobileOpen = false" href="#contact" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+                যোগাযোগ
+            </a>
+
+            <div class="pt-2">
+                <a @click="mobileOpen = false" href="#contact" class="w-full py-3 rounded-xl gradient-btn text-center text-sm font-bold text-white flex items-center justify-center gap-2">
+                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                    <span>কথা বলুন</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="relative z-10 pt-20">
+            <!-- 4.1 HERO SECTION -->
+    <section id="home" class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Hero Left: Text & CTAs -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-[#8B5CF6]/30 text-xs font-semibold text-[#8B5CF6]">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        <span>ফ্রিল্যান্স ও রিমোট কাজের জন্য প্রস্তুত</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <div class="space-y-2">
+                        <p class="text-sm sm:text-base font-semibold tracking-wider uppercase text-[#EC4899]">
+                            হ্যালো, আমি <span class="text-white font-bold">Ashika</span>
+                        </p>
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15]">
+                            <span class="gradient-text">আমি ডিজিটাল প্রযুক্তি ও ক্রিয়েটিভ সলিউশনের মাধ্যমে ব্যবসাকে এগিয়ে নিতে কাজ করি।</span>
+                        </h1>
+                    </div>
+
+                    <!-- Tagline / Intro -->
+                    <p class="text-sm sm:text-base lg:text-lg text-[#A1A1AA] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        আধুনিক ওয়েব ডেভেলপমেন্ট এবং ডাটা-চালিত মার্কেটিং কৌশলের সমন্বয়ে ব্র্যান্ড গ্রোথ ও প্রিমিয়াম ডিজিটাল এক্সপেরিয়েন্স তৈরি করি।
+                    </p>
+
+                    <!-- CTAs & WhatsApp -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#portfolio" class="px-7 py-3.5 rounded-xl gradient-btn font-bold text-sm text-white shadow-lg shadow-[#8B5CF6]/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                            <span>কাজগুলো দেখুন</span>
+                            <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+                        </a>
+
+                        <a href="#contact" class="px-7 py-3.5 rounded-xl glass-panel font-bold text-sm text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 active:scale-95 transition-all flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-[#8B5CF6]"></i>
+                            <span>যোগাযোগ করুন</span>
+                        </a>
+
+                        <a href="https://wa.me/8801938267920" target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-xl bg-emerald-600/20 border border-emerald-500/30 hover:bg-emerald-600/30 font-semibold text-sm text-emerald-300 flex items-center gap-2 transition">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Icons Strip -->
+                    <div class="pt-4 flex items-center justify-center lg:justify-start gap-3">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+                            কানেক্ট:
+                        </span>
+                                                    <a 
+                                href="https://wa.me/8801938267920" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="WhatsApp"
+                                class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 transition">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                                                    <a 
+                                href="https://linkedin.com/in/ashika" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="LinkedIn"
+                                class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 transition">
+                                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                            </a>
+                                                    <a 
+                                href="https://github.com/ashika" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="GitHub"
+                                class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 transition">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </a>
+                                                    <a 
+                                href="https://facebook.com/ashika.digital" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="Facebook"
+                                class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 transition">
+                                <i data-lucide="facebook" class="w-4 h-4"></i>
+                            </a>
+                                                    <a 
+                                href="https://instagram.com/ashika.dev" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="Instagram"
+                                class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 transition">
+                                <i data-lucide="instagram" class="w-4 h-4"></i>
+                            </a>
+                                                    <a 
+                                href="https://x.com/ashika_dev" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="Twitter"
+                                class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/50 hover:bg-[#8B5CF6]/10 transition">
+                                <i data-lucide="twitter" class="w-4 h-4"></i>
+                            </a>
+                                            </div>
+                </div>
+
+                <!-- Hero Right: Futuristic Glassmorphism Profile Avatar Card -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <!-- Rotating Glowing Neon Rings Behind -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#8B5CF6]/30 to-[#EC4899]/25 blur-2xl transform scale-110"></div>
+                    
+                    <div class="relative w-full max-w-sm sm:max-w-md rounded-3xl p-1 bg-gradient-to-b from-[#8B5CF6]/40 via-[#EC4899]/15 to-transparent shadow-2xl">
+                        <div class="rounded-[22px] glass-panel p-6 sm:p-8 backdrop-blur-2xl relative overflow-hidden">
+                            <!-- Top Card Header -->
+                            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                                </div>
+                                <span class="text-[11px] font-mono text-[#EC4899] bg-[#111426] px-2.5 py-1 rounded-md border border-[#8B5CF6]/30">
+                                    ashika.dev
+                                </span>
+                            </div>
+
+                            <!-- Visual Avatar / Badge -->
+                            <div class="relative mx-auto w-44 h-44 sm:w-52 sm:h-52 rounded-2xl overflow-hidden mb-6 p-1 bg-gradient-to-tr from-[#8B5CF6] to-[#EC4899] shadow-xl group">
+                                <div class="w-full h-full rounded-[14px] overflow-hidden bg-slate-900 relative flex items-center justify-center">
+                                                                            <!-- High-Tech Futuristic Graphic Avatar -->
+                                        <div class="w-full h-full bg-gradient-to-b from-[#171B33] to-[#080B18] flex flex-col items-center justify-center text-center p-4">
+                                            <div class="w-20 h-20 rounded-full gradient-btn flex items-center justify-center text-3xl font-extrabold text-white mb-2 shadow-lg shadow-[#8B5CF6]/40">
+                                                A
+                                            </div>
+                                            <span class="text-sm font-bold text-white">ASHIKA</span>
+                                            <span class="text-[11px] text-[#A1A1AA]">ডিজিটাল মার্কেটার এবং ফুল-স্ট্যাক ডেভেলপার</span>
+                                        </div>
+                                                                        
+                                    <div class="absolute bottom-2 left-2 right-2 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-between text-[11px] text-white">
+                                        <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
+                                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                                            Online
+                                        </span>
+                                        <span class="text-[#A1A1AA]">Dhaka, BD</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Bio Pill -->
+                            <div class="space-y-3 text-center">
+                                <h3 class="text-lg font-bold text-white">Ashika</h3>
+                                <p class="text-xs text-[#A1A1AA] font-medium">
+                                    ডিজিটাল মার্কেটার এবং ফুল-স্ট্যাক ডেভেলপার
+                                </p>
+                                <div class="flex items-center justify-center gap-2 pt-2">
+                                    <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                                        Laravel 13
+                                    </span>
+                                    <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                        Meta Ads
+                                    </span>
+                                    <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426] text-[#06D4F4] border border-[#06D4F4]/30">
+                                        SEO
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Ticker Bar -->
+            <div class="mt-16 pt-8 border-t border-[#8B5CF6]/15 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="glass-card p-5 rounded-2xl">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+                        <span class="gradient-accent-text">4+</span>
+                    </div>
+                    <div class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+                        বছরের অভিজ্ঞতা
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+                        <span class="gradient-accent-text">50+</span>
+                    </div>
+                    <div class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+                        সম্পন্ন প্রজেক্ট
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+                        <span class="gradient-accent-text">42+</span>
+                    </div>
+                    <div class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+                        সন্তুষ্ট ক্লায়েন্ট
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+                        <span class="gradient-accent-text">99%</span>
+                    </div>
+                    <div class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+                        ক্লায়েন্ট সন্তুষ্টি
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.2 ABOUT ME SECTION -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                    আমার সম্পর্কে
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">
+                    ক্রিয়েটিভ কোড এবং গ্রোথ মার্কেটিং এর মেলবন্ধন
+                </h2>
+                <p class="text-sm sm:text-base text-[#A1A1AA]">
+                    আধুনিক ব্র্যান্ডগুলোকে প্রতিযোগিতায় এগিয়ে নিতে নির্ভরযোগ্য টেকনিক্যাল সঙ্গী।
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <!-- Left: Visual & Quick Details -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6 border border-[#8B5CF6]/20">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-slate-900/80 relative">
+                            <img 
+                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                                alt="Ashika Developer" 
+                                class="w-full h-full object-cover"
+                            >
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#080B18] via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl glass-panel border border-white/10">
+                                <p class="text-xs font-bold text-white flex items-center gap-1.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                                    ভেরিফাইড প্রফেশনাল
+                                </p>
+                                <p class="text-[11px] text-[#A1A1AA] mt-0.5">
+                                    ডিজিটাল মার্কেটার এবং ফুল-স্ট্যাক ডেভেলপার &bull; ঢাকা, বাংলাদেশ
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Download CV & Hire Buttons -->
+                        <div class="grid grid-cols-2 gap-3 pt-2">
+                            <a 
+                                href="/portfolio/download-cv" 
+                                class="py-3 px-4 rounded-xl gradient-btn font-semibold text-xs text-white text-center flex items-center justify-center gap-1.5 transition">
+                                <i data-lucide="download" class="w-4 h-4"></i>
+                                <span>সিভি ডাউনলোড</span>
+                            </a>
+                            <a 
+                                href="#contact" 
+                                class="py-3 px-4 rounded-xl glass-panel border border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 font-semibold text-xs text-[#A1A1AA] hover:text-white text-center flex items-center justify-center gap-1.5 transition">
+                                <i data-lucide="send" class="w-4 h-4 text-[#8B5CF6]"></i>
+                                <span>হায়ার করুন</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Bio & Career Goals -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                            <i data-lucide="sparkles" class="w-5 h-5 text-[#8B5CF6]"></i>
+                            <span>আমার পরিচিতি ও উদ্দেশ্য</span>
+                        </h3>
+                        <p class="text-sm sm:text-base text-[#A1A1AA] leading-relaxed">
+                            হ্যালো, আমি আশিকা — একজন প্রফেশনাল ডিজিটাল মার্কেটার এবং ফুল-স্ট্যাক ডেভেলপার। চার বছরেরও বেশি বাস্তব অভিজ্ঞতা নিয়ে আমি আধুনিক কোডিং এবং ডাটা-ড্রিভেন মার্কেটিং স্ট্র্যাটেজির মাধ্যমে যেকোনো ব্র্যান্ডের সেলস ও ডিজিটাল পরিচিতি বৃদ্ধি করতে সহায়তা করি।
+                        </p>
+                        <p class="text-sm sm:text-base text-[#A1A1AA] leading-relaxed">
+                            আমি এমন ডিজিটাল এক্সপেরিয়েন্স তৈরিতে বিশ্বাস করি যা গ্রাহকদের আকর্ষণ করে এবং সাধারণ ভিজিটরকে স্থায়ী ক্লায়েন্টে রূপান্তর করে। টেকনিক্যাল ইঞ্জিনিয়ারিং (লারাভেল, পিএইচপি, টেলউইন্ড) ও গ্রোথ মার্কেটিং (এসইও, মেটা অ্যাডস, গুগল অ্যাডস) এ আমার দ্বিমুখী অভিজ্ঞতা আপনার ব্যবসাকে দেবে সম্পূর্ণ ডিজিটাল সল্যুশন।
+                        </p>
+                    </div>
+
+                    <!-- Career Goals Card -->
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-3 border-l-4 border-l-[#8B5CF6]">
+                        <h4 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                            <i data-lucide="target" class="w-5 h-5 text-[#EC4899]"></i>
+                            <span>ক্যারিয়ার ভিশন ও লক্ষ্য</span>
+                        </h4>
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                            বিশ্বমানের সফটওয়্যার ও অটোমেটেড মার্কেটিং সিস্টেম তৈরির মাধ্যমে দেশি ও আন্তর্জাতিক ব্যবসাকে টেকসই প্রবৃদ্ধি অর্জনে সহায়তা করা।
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.3 SKILLS SECTION -->
+    <section id="skills" class="py-20 relative bg-[#111426]/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                    আমার সক্ষমতা
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">
+                    দক্ষতা ও টেক স্ট্যাক
+                </h2>
+                <p class="text-sm sm:text-base text-[#A1A1AA]">
+                    বাস্তব ক্লায়েন্ট প্রজেক্ট ও সফটওয়্যার ইঞ্জিনিয়ারিং এর মাধ্যমে অর্জিত পেশাদার দক্ষতা।
+                </p>
+            </div>
+
+            <!-- Categories Tabs / Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- 1. Digital Marketing Skills -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center gap-3 pb-4 border-b border-white/5">
+                        <div class="w-10 h-10 rounded-xl bg-[#8B5CF6]/20 border border-[#8B5CF6]/30 flex items-center justify-center text-[#8B5CF6]">
+                            <i data-lucide="trending-up" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">ডিজিটাল মার্কেটিং</h3>
+                            <span class="text-xs text-[#A1A1AA] font-medium">Growth & Traffic</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-5">
+                                                                                    <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="search" class="w-3.5 h-3.5 text-[#8B5CF6]"></i>
+                                            SEO
+                                        </span>
+                                        <span class="text-[#8B5CF6] font-mono">92%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] transition-all duration-1000"
+                                            style="width: 92%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="share-2" class="w-3.5 h-3.5 text-[#8B5CF6]"></i>
+                                            Social Media Marketing
+                                        </span>
+                                        <span class="text-[#8B5CF6] font-mono">95%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] transition-all duration-1000"
+                                            style="width: 95%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="target" class="w-3.5 h-3.5 text-[#8B5CF6]"></i>
+                                            Facebook Ads
+                                        </span>
+                                        <span class="text-[#8B5CF6] font-mono">96%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] transition-all duration-1000"
+                                            style="width: 96%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-[#8B5CF6]"></i>
+                                            Google Ads
+                                        </span>
+                                        <span class="text-[#8B5CF6] font-mono">88%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] transition-all duration-1000"
+                                            style="width: 88%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="users" class="w-3.5 h-3.5 text-[#8B5CF6]"></i>
+                                            Social Media Management
+                                        </span>
+                                        <span class="text-[#8B5CF6] font-mono">94%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] transition-all duration-1000"
+                                            style="width: 94%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                                        </div>
+                </div>
+
+                <!-- 2. Development Skills -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center gap-3 pb-4 border-b border-white/5">
+                        <div class="w-10 h-10 rounded-xl bg-[#EC4899]/20 border border-[#EC4899]/30 flex items-center justify-center text-[#EC4899]">
+                            <i data-lucide="code" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">ওয়েব ডেভেলপমেন্ট</h3>
+                            <span class="text-xs text-[#A1A1AA] font-medium">Full-Stack Tech</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-5">
+                                                                                    <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="code" class="w-3.5 h-3.5 text-[#EC4899]"></i>
+                                            HTML5 / Modern Markup
+                                        </span>
+                                        <span class="text-[#EC4899] font-mono">98%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] transition-all duration-1000"
+                                            style="width: 98%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="palette" class="w-3.5 h-3.5 text-[#EC4899]"></i>
+                                            CSS3 / Tailwind CSS
+                                        </span>
+                                        <span class="text-[#EC4899] font-mono">95%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] transition-all duration-1000"
+                                            style="width: 95%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="cpu" class="w-3.5 h-3.5 text-[#EC4899]"></i>
+                                            JavaScript (ES6+ &amp; Alpine.js)
+                                        </span>
+                                        <span class="text-[#EC4899] font-mono">88%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] transition-all duration-1000"
+                                            style="width: 88%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="server" class="w-3.5 h-3.5 text-[#EC4899]"></i>
+                                            PHP (8.3+)
+                                        </span>
+                                        <span class="text-[#EC4899] font-mono">92%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] transition-all duration-1000"
+                                            style="width: 92%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="layers" class="w-3.5 h-3.5 text-[#EC4899]"></i>
+                                            Laravel (11 / 12 / 13)
+                                        </span>
+                                        <span class="text-[#EC4899] font-mono">94%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] transition-all duration-1000"
+                                            style="width: 94%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="database" class="w-3.5 h-3.5 text-[#EC4899]"></i>
+                                            MySQL / Database Architecture
+                                        </span>
+                                        <span class="text-[#EC4899] font-mono">90%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] transition-all duration-1000"
+                                            style="width: 90%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="zap" class="w-3.5 h-3.5 text-[#EC4899]"></i>
+                                            Livewire &amp; Full-Stack UI
+                                        </span>
+                                        <span class="text-[#EC4899] font-mono">91%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] transition-all duration-1000"
+                                            style="width: 91%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                                        </div>
+                </div>
+
+                <!-- 3. Creative Skills -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center gap-3 pb-4 border-b border-white/5">
+                        <div class="w-10 h-10 rounded-xl bg-[#06D4F4]/20 border border-[#06D4F4]/30 flex items-center justify-center text-[#06D4F4]">
+                            <i data-lucide="palette" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">ক্রিয়েটিভ স্কিলস</h3>
+                            <span class="text-xs text-[#A1A1AA] font-medium">Media & Visuals</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-5">
+                                                                                    <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="video" class="w-3.5 h-3.5 text-[#06D4F4]"></i>
+                                            Video Editing
+                                        </span>
+                                        <span class="text-[#06D4F4] font-mono">90%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06D4F4] transition-all duration-1000"
+                                            style="width: 90%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="image" class="w-3.5 h-3.5 text-[#06D4F4]"></i>
+                                            Graphic Design
+                                        </span>
+                                        <span class="text-[#06D4F4] font-mono">93%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06D4F4] transition-all duration-1000"
+                                            style="width: 93%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="film" class="w-3.5 h-3.5 text-[#06D4F4]"></i>
+                                            Motion Graphics
+                                        </span>
+                                        <span class="text-[#06D4F4] font-mono">85%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06D4F4] transition-all duration-1000"
+                                            style="width: 85%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-xs font-semibold">
+                                        <span class="text-white flex items-center gap-1.5">
+                                            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#06D4F4]"></i>
+                                            AI Content Creation
+                                        </span>
+                                        <span class="text-[#06D4F4] font-mono">94%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                                        <div 
+                                            class="h-full rounded-full bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06D4F4] transition-all duration-1000"
+                                            style="width: 94%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                                                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.4 SERVICES SECTION -->
+    <section id="services" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                    আমার সেবাসমূহ
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">
+                    বিশেষায়িত সার্ভিসসমূহ
+                </h2>
+                <p class="text-sm sm:text-base text-[#A1A1AA]">
+                    আইডিয়া থেকে সেলস কনভার্সন পর্যন্ত আপনার ব্র্যান্ডের পূর্ণাঙ্গ ডিজিটাল সমাধান।
+                </p>
+            </div>
+
+            <!-- The 8 Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/50">
+                        <div>
+                            <!-- Icon & Tag -->
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 rounded-xl gradient-btn flex items-center justify-center text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="globe" class="w-6 h-6"></i>
+                                </div>
+                                                                    <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                        ওয়েব ডিজাইন
+                                    </span>
+                                                            </div>
+
+                            <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2">
+                                ওয়েবসাইট ডেভেলপমেন্ট
+                            </h3>
+
+                            <p class="text-xs text-[#A1A1AA] leading-relaxed mb-4">
+                                উচ্চ গতির এবং আধুনিক রেসপনসিভ ওয়েবসাইট যা যেকোনো ডিভাইসে নিখুঁতভাবে লোড হয় এবং ব্র্যান্ড ভ্যালু বহুগুণ বৃদ্ধি করে।
+                            </p>
+
+                            <!-- Features List -->
+                                                            <ul class="space-y-1.5 mb-6">
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>সকল ডিভাইসের জন্য রেসপনসিভ লেআউট</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>সার্চ ইঞ্জিন বান্ধব ক্লিন কোড</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>অসাধারণ স্পিড অপ্টিমাইজেশন</span>
+                                        </li>
+                                                                    </ul>
+                                                    </div>
+
+                        <!-- CTA Contact Link -->
+                        <div class="pt-4 border-t border-white/5">
+                            <a 
+                                href="#contact" 
+                                class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                <span>সার্ভিসটি গ্রহণ করুন</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/50">
+                        <div>
+                            <!-- Icon & Tag -->
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 rounded-xl gradient-btn flex items-center justify-center text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="layout" class="w-6 h-6"></i>
+                                </div>
+                                                                    <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                        ফুল-স্ট্যাক সফটওয়্যার
+                                    </span>
+                                                            </div>
+
+                            <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2">
+                                ওয়েব অ্যাপ্লিকেশন ডেভেলপমেন্ট
+                            </h3>
+
+                            <p class="text-xs text-[#A1A1AA] leading-relaxed mb-4">
+                                লারাভেল ও মাইএসকিউএল দিয়ে সুরক্ষিত, স্কেলেবল কাস্টম ওয়েব অ্যাপ্লিকেশন এবং অ্যাডমিন ড্যাশবোর্ড তৈরি।
+                            </p>
+
+                            <!-- Features List -->
+                                                            <ul class="space-y-1.5 mb-6">
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>শক্তিশালী লারাভেল ব্যাকএন্ড</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>লাইভওয়্যার রিঅ্যাকটিভ ইন্টারফেস</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>সুরক্ষিত অ্যাডমিন ড্যাশবোর্ড</span>
+                                        </li>
+                                                                    </ul>
+                                                    </div>
+
+                        <!-- CTA Contact Link -->
+                        <div class="pt-4 border-t border-white/5">
+                            <a 
+                                href="#contact" 
+                                class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                <span>সার্ভিসটি গ্রহণ করুন</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/50">
+                        <div>
+                            <!-- Icon & Tag -->
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 rounded-xl gradient-btn flex items-center justify-center text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="trending-up" class="w-6 h-6"></i>
+                                </div>
+                                                                    <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                        গ্রোথ স্ট্র্যাটেজি
+                                    </span>
+                                                            </div>
+
+                            <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2">
+                                ডিজিটাল মার্কেটিং
+                            </h3>
+
+                            <p class="text-xs text-[#A1A1AA] leading-relaxed mb-4">
+                                পূর্ণাঙ্গ ডিজিটাল মার্কেটিং সমাধান যা আপনার ব্র্যান্ডের পরিচিতি বৃদ্ধি করে এবং বিক্রয় ও আরওআই বহুগুণ বাড়িয়ে তোলে।
+                            </p>
+
+                            <!-- Features List -->
+                                                            <ul class="space-y-1.5 mb-6">
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>ডাটা-চালিত মার্কেটিং ফানেল</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>টার্গেটেড অডিয়েন্স রিসার্চ</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>প্রতিযোগী বিশ্লেষণ</span>
+                                        </li>
+                                                                    </ul>
+                                                    </div>
+
+                        <!-- CTA Contact Link -->
+                        <div class="pt-4 border-t border-white/5">
+                            <a 
+                                href="#contact" 
+                                class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                <span>সার্ভিসটি গ্রহণ করুন</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/50">
+                        <div>
+                            <!-- Icon & Tag -->
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 rounded-xl gradient-btn flex items-center justify-center text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                                </div>
+                                                                    <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                        সোশ্যাল ব্র্যান্ডিং
+                                    </span>
+                                                            </div>
+
+                            <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2">
+                                সোশ্যাল মিডিয়া ম্যানেজমেন্ট
+                            </h3>
+
+                            <p class="text-xs text-[#A1A1AA] leading-relaxed mb-4">
+                                ফেসবুক, ইনস্টাগ্রাম, লিংকডইন পেজের সার্বিক কনটেন্ট প্ল্যানিং, ব্র্যান্ডিং এবং নিয়মিত কমিউনিটি এনগেজমেন্ট পরিচালনা।
+                            </p>
+
+                            <!-- Features List -->
+                                                            <ul class="space-y-1.5 mb-6">
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>মাসিক কনটেন্ট ক্যালেন্ডার</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>আকর্ষণীয় পোস্ট ডিজাইন ও কপিরাইটিং</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>নিয়মিত কাস্টমার কমিউনিকেশন</span>
+                                        </li>
+                                                                    </ul>
+                                                    </div>
+
+                        <!-- CTA Contact Link -->
+                        <div class="pt-4 border-t border-white/5">
+                            <a 
+                                href="#contact" 
+                                class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                <span>সার্ভিসটি গ্রহণ করুন</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/50">
+                        <div>
+                            <!-- Icon & Tag -->
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 rounded-xl gradient-btn flex items-center justify-center text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="film" class="w-6 h-6"></i>
+                                </div>
+                                                                    <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                        ভিডিও প্রোডাকশন
+                                    </span>
+                                                            </div>
+
+                            <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2">
+                                ভিডিও এডিটিং
+                            </h3>
+
+                            <p class="text-xs text-[#A1A1AA] leading-relaxed mb-4">
+                                সোশ্যাল মিডিয়া রিলস, বিজ্ঞাপনী ভিডিও এবং ইউটিউব কনটেন্টের আধুনিক ও হাই-রিটেনশন ভিডিও এডিটিং।
+                            </p>
+
+                            <!-- Features List -->
+                                                            <ul class="space-y-1.5 mb-6">
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>৪কে কমার্শিয়াল এডিটিং</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>সাউন্ড ইফেক্ট ও ব্যাকগ্রাউন্ড মিউজিক</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>কালার গ্রেডিং</span>
+                                        </li>
+                                                                    </ul>
+                                                    </div>
+
+                        <!-- CTA Contact Link -->
+                        <div class="pt-4 border-t border-white/5">
+                            <a 
+                                href="#contact" 
+                                class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                <span>সার্ভিসটি গ্রহণ করুন</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/50">
+                        <div>
+                            <!-- Icon & Tag -->
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 rounded-xl gradient-btn flex items-center justify-center text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="pen-tool" class="w-6 h-6"></i>
+                                </div>
+                                                                    <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                        ক্রিয়েটিভ ডিজাইন
+                                    </span>
+                                                            </div>
+
+                            <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2">
+                                গ্রাফিক ডিজাইন
+                            </h3>
+
+                            <p class="text-xs text-[#A1A1AA] leading-relaxed mb-4">
+                                লোগো, ব্র্যান্ড আইডেন্টিটি, বিজ্ঞাপনী ব্যানার ও সোশ্যাল মিডিয়া পোস্টের দৃষ্টিনন্দন গ্রাফিক ডিজাইন।
+                            </p>
+
+                            <!-- Features List -->
+                                                            <ul class="space-y-1.5 mb-6">
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>ব্র্যান্ড লোগো ও গাইডলাইন</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>অ্যাড ব্যানার ও ক্যাম্পেইন ক্রিয়েটিভ</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>সোশ্যাল মিডিয়া টেমপ্লেট</span>
+                                        </li>
+                                                                    </ul>
+                                                    </div>
+
+                        <!-- CTA Contact Link -->
+                        <div class="pt-4 border-t border-white/5">
+                            <a 
+                                href="#contact" 
+                                class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                <span>সার্ভিসটি গ্রহণ করুন</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/50">
+                        <div>
+                            <!-- Icon & Tag -->
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 rounded-xl gradient-btn flex items-center justify-center text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="pie-chart" class="w-6 h-6"></i>
+                                </div>
+                                                                    <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                        টার্গেটেড অ্যাডস
+                                    </span>
+                                                            </div>
+
+                            <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2">
+                                বিজ্ঞাপন ক্যাম্পেইন পরিচালনা
+                            </h3>
+
+                            <p class="text-xs text-[#A1A1AA] leading-relaxed mb-4">
+                                মেটা ও গুগল প্ল্যাটফর্মে হাই-কনভার্টিং পেইড বিজ্ঞাপন পরিচালনা, অডিয়েন্স টেস্টিং এবং সেলস বাড়ানো।
+                            </p>
+
+                            <!-- Features List -->
+                                                            <ul class="space-y-1.5 mb-6">
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>টার্গেটেড অডিয়েন্স সেটআপ</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>মাল্টি-ভ্যারিয়েন্ট এ/বি টেস্টিং</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>পিক্সেল ও কনভার্সন ট্র্যাকিং</span>
+                                        </li>
+                                                                    </ul>
+                                                    </div>
+
+                        <!-- CTA Contact Link -->
+                        <div class="pt-4 border-t border-white/5">
+                            <a 
+                                href="#contact" 
+                                class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                <span>সার্ভিসটি গ্রহণ করুন</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:border-[#8B5CF6]/50">
+                        <div>
+                            <!-- Icon & Tag -->
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 rounded-xl gradient-btn flex items-center justify-center text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                                </div>
+                                                                    <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                        এআই টেকনোলজি
+                                    </span>
+                                                            </div>
+
+                            <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2">
+                                এআই ভিডিও ক্রিয়েশন
+                            </h3>
+
+                            <p class="text-xs text-[#A1A1AA] leading-relaxed mb-4">
+                                লেটেস্ট কৃত্রিম বুদ্ধিমত্তা (AI) প্রযুক্তির সাহায্যে ডিজিটাল অবতার, প্রডাক্ট শোকেস ও মাল্টি-ল্যাঙ্গুয়েজ ভয়েসওভার ভিডিও তৈরি।
+                            </p>
+
+                            <!-- Features List -->
+                                                            <ul class="space-y-1.5 mb-6">
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>রিয়ালিস্টিক এআই অবতার ভিডিও</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>অটোমেটেড ভয়েসওভার ও স্ক্রিপ্ট</span>
+                                        </li>
+                                                                            <li class="text-[11px] text-[#A1A1AA] flex items-start gap-1.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-[#8B5CF6] shrink-0 mt-0.5"></i>
+                                            <span>উচ্চ মানের ভাইরাল ভিডিও কনটেন্ট</span>
+                                        </li>
+                                                                    </ul>
+                                                    </div>
+
+                        <!-- CTA Contact Link -->
+                        <div class="pt-4 border-t border-white/5">
+                            <a 
+                                href="#contact" 
+                                class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                <span>সার্ভিসটি গ্রহণ করুন</span>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+    </section>
+
+    <!-- 4.5 PORTFOLIO / PROJECTS SECTION -->
+    <section id="portfolio" class="py-20 relative bg-[#111426]/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                    নির্বাচিত কাজসমূহ
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">
+                    পোর্টফোলিও ও কেস স্টাডিজ
+                </h2>
+                <p class="text-sm sm:text-base text-[#A1A1AA]">
+                    সফল সফটওয়্যার ডেপ্লয়মেন্ট, উচ্চ আয়ের বিজ্ঞাপনী ক্যাম্পেইন ও ব্র্যান্ডের রূপান্তর দেখুন।
+                </p>
+            </div>
+
+            <!-- Livewire Project Filter Component -->
+            <div wire:key="lw-3316153410-0" wire:snapshot="{&quot;data&quot;:{&quot;selectedCategory&quot;:null,&quot;limit&quot;:6,&quot;showAll&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;XPRQWLXlMG8bL8GiqPMB&quot;,&quot;name&quot;:&quot;project-filter&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;bn&quot;,&quot;islands&quot;:[]},&quot;checksum&quot;:&quot;d0453a92dfd06a135e4eac2e06294f380a9f12a238130fef69403521c8ada4c5&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="XPRQWLXlMG8bL8GiqPMB" wire:name="project-filter">
+    <!-- Category Filter Tabs -->
+    <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <button 
+            type="button"
+            wire:click="selectCategory(null)"
+            class="px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white shadow-lg shadow-[#8B5CF6]/25">
+            সকল ক্যাটাগরি
+        </button>
+
+        <!--[if BLOCK]><![endif]-->            <button 
+                type="button"
+                wire:click="selectCategory('web-development')"
+                class="px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer glass-panel text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/40">
+                ওয়েব ডেভেলপমেন্ট
+            </button>
+                    <button 
+                type="button"
+                wire:click="selectCategory('digital-marketing')"
+                class="px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer glass-panel text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/40">
+                ডিজিটাল মার্কেটিং
+            </button>
+                    <button 
+                type="button"
+                wire:click="selectCategory('branding-design')"
+                class="px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer glass-panel text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/40">
+                ব্র্যান্ডিং ও ডিজাইন
+            </button>
+                    <button 
+                type="button"
+                wire:click="selectCategory('video-production')"
+                class="px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer glass-panel text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/40">
+                ভিডিও প্রোডাকশন
+            </button>
+        <!--[if ENDBLOCK]><![endif]-->    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!--[if BLOCK]><![endif]-->            <div class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between border border-[#8B5CF6]/20 hover:border-[#EC4899]/40">
+                <!-- Cover Image & Overlay -->
+                <div class="relative overflow-hidden aspect-[16/10] bg-slate-900">
+                    <img 
+                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" 
+                        alt="ই-কমার্স ফ্যাশন বুটিক প্ল্যাটফর্ম" 
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B18] via-[#080B18]/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    
+                    <!--[if BLOCK]><![endif]-->                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426]/90 backdrop-blur-md text-[#EC4899] border border-[#EC4899]/30">
+                            ওয়েব ডেভেলপমেন্ট
+                        </span>
+                    <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                        <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400 text-amber-400"></i> Featured
+                        </span>
+                    <!--[if ENDBLOCK]><![endif]-->                </div>
+
+                <!-- Content -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2 line-clamp-1">
+                            <a href="/portfolio/projects/ecommerce-fashion-boutique">
+                                ই-কমার্স ফ্যাশন বুটিক প্ল্যাটফর্ম
+                            </a>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] line-clamp-2 mb-4 leading-relaxed">
+                            লারাভেল ও লাইভওয়্যার দিয়ে তৈরি আধুনিক ই-কমার্স ওয়েবসাইট যাতে রয়েছে দ্রুত চেকআউট এবং মোবাইল বান্ধব ইন্টারফেস।
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <!--[if BLOCK]><![endif]-->                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <!--[if BLOCK]><![endif]-->                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Laravel 13
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Livewire
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Tailwind CSS
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        MySQL
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                                <!--[if BLOCK]><![endif]-->                                    <span class="px-2 py-0.5 rounded-md text-[10px] font-medium text-[#A1A1AA] bg-[#171B33]">
+                                        +1
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        <!--[if ENDBLOCK]><![endif]-->                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <a 
+                            href="/portfolio/projects/ecommerce-fashion-boutique" 
+                            class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1 transition">
+                            <span>বিস্তারিত দেখুন</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <!--[if BLOCK]><![endif]-->                                <a 
+                                    href="https://github.com/ashika/ecommerce-fashion" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    title="সোর্স কোড"
+                                    class="p-2 rounded-lg bg-[#171B33] hover:bg-[#8B5CF6]/20 text-[#A1A1AA] hover:text-white border border-white/10 transition">
+                                    <i data-lucide="github" class="w-4 h-4"></i>
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]-->                                <a 
+                                    href="https://example.com/demo/fashion-boutique" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    title="লাইভ ডেমো"
+                                    class="p-2 rounded-lg bg-[#8B5CF6]/20 hover:bg-[#8B5CF6]/40 text-[#8B5CF6] hover:text-white border border-[#8B5CF6]/30 transition">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between border border-[#8B5CF6]/20 hover:border-[#EC4899]/40">
+                <!-- Cover Image & Overlay -->
+                <div class="relative overflow-hidden aspect-[16/10] bg-slate-900">
+                    <img 
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" 
+                        alt="ই-কমার্স ৪৫০% আরওআই মেটা বিজ্ঞাপন ক্যাম্পেইন" 
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B18] via-[#080B18]/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    
+                    <!--[if BLOCK]><![endif]-->                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426]/90 backdrop-blur-md text-[#EC4899] border border-[#EC4899]/30">
+                            ডিজিটাল মার্কেটিং
+                        </span>
+                    <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                        <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400 text-amber-400"></i> Featured
+                        </span>
+                    <!--[if ENDBLOCK]><![endif]-->                </div>
+
+                <!-- Content -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2 line-clamp-1">
+                            <a href="/portfolio/projects/ecommerce-meta-ads-scaling">
+                                ই-কমার্স ৪৫০% আরওআই মেটা বিজ্ঞাপন ক্যাম্পেইন
+                            </a>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] line-clamp-2 mb-4 leading-relaxed">
+                            টার্গেটেড ফেসবুক ও ইনস্টাগ্রাম বিজ্ঞাপনের মাধ্যমে বিউটি ব্র্যান্ডের ৪৫০% আরওআই ও বিপুল সেলস বৃদ্ধি।
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <!--[if BLOCK]><![endif]-->                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <!--[if BLOCK]><![endif]-->                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Meta Ads Manager
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Pixel &amp; CAPI
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Google Analytics 4
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        A/B Testing
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            </div>
+                        <!--[if ENDBLOCK]><![endif]-->                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <a 
+                            href="/portfolio/projects/ecommerce-meta-ads-scaling" 
+                            class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1 transition">
+                            <span>বিস্তারিত দেখুন</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]-->                                <a 
+                                    href="https://example.com/case-study/glow-cosmetics" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    title="লাইভ ডেমো"
+                                    class="p-2 rounded-lg bg-[#8B5CF6]/20 hover:bg-[#8B5CF6]/40 text-[#8B5CF6] hover:text-white border border-[#8B5CF6]/30 transition">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between border border-[#8B5CF6]/20 hover:border-[#EC4899]/40">
+                <!-- Cover Image & Overlay -->
+                <div class="relative overflow-hidden aspect-[16/10] bg-slate-900">
+                    <img 
+                        src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" 
+                        alt="সাস প্রজেক্ট ও টিম ওয়ার্কফ্লো ড্যাশবোর্ড" 
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B18] via-[#080B18]/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    
+                    <!--[if BLOCK]><![endif]-->                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426]/90 backdrop-blur-md text-[#EC4899] border border-[#EC4899]/30">
+                            ওয়েব ডেভেলপমেন্ট
+                        </span>
+                    <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                        <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400 text-amber-400"></i> Featured
+                        </span>
+                    <!--[if ENDBLOCK]><![endif]-->                </div>
+
+                <!-- Content -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2 line-clamp-1">
+                            <a href="/portfolio/projects/saas-team-workflow-dashboard">
+                                সাস প্রজেক্ট ও টিম ওয়ার্কফ্লো ড্যাশবোর্ড
+                            </a>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] line-clamp-2 mb-4 leading-relaxed">
+                            ডার্ক-থিম সমৃদ্ধ টিম কোলাবোরেশন ও প্রজেক্ট ম্যানেজমেন্ট সফটওয়্যার ড্যাশবোর্ড।
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <!--[if BLOCK]><![endif]-->                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <!--[if BLOCK]><![endif]-->                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Laravel 13
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Livewire
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Tailwind CSS
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Chart.js
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                                <!--[if BLOCK]><![endif]-->                                    <span class="px-2 py-0.5 rounded-md text-[10px] font-medium text-[#A1A1AA] bg-[#171B33]">
+                                        +1
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        <!--[if ENDBLOCK]><![endif]-->                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <a 
+                            href="/portfolio/projects/saas-team-workflow-dashboard" 
+                            class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1 transition">
+                            <span>বিস্তারিত দেখুন</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <!--[if BLOCK]><![endif]-->                                <a 
+                                    href="https://github.com/ashika/saas-dashboard" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    title="সোর্স কোড"
+                                    class="p-2 rounded-lg bg-[#171B33] hover:bg-[#8B5CF6]/20 text-[#A1A1AA] hover:text-white border border-white/10 transition">
+                                    <i data-lucide="github" class="w-4 h-4"></i>
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]-->                                <a 
+                                    href="https://example.com/demo/workflow-dashboard" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    title="লাইভ ডেমো"
+                                    class="p-2 rounded-lg bg-[#8B5CF6]/20 hover:bg-[#8B5CF6]/40 text-[#8B5CF6] hover:text-white border border-[#8B5CF6]/30 transition">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between border border-[#8B5CF6]/20 hover:border-[#EC4899]/40">
+                <!-- Cover Image & Overlay -->
+                <div class="relative overflow-hidden aspect-[16/10] bg-slate-900">
+                    <img 
+                        src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" 
+                        alt="ফিনটেক নিও-ব্যাংক ভিজ্যুয়াল আইডেন্টিটি ও ডিজাইন" 
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B18] via-[#080B18]/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    
+                    <!--[if BLOCK]><![endif]-->                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426]/90 backdrop-blur-md text-[#EC4899] border border-[#EC4899]/30">
+                            ব্র্যান্ডিং ও ডিজাইন
+                        </span>
+                    <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                </div>
+
+                <!-- Content -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2 line-clamp-1">
+                            <a href="/portfolio/projects/fintech-neobank-identity">
+                                ফিনটেক নিও-ব্যাংক ভিজ্যুয়াল আইডেন্টিটি ও ডিজাইন
+                            </a>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] line-clamp-2 mb-4 leading-relaxed">
+                            ফিউচারিস্টিক ও মিনিমাল ফিনটেক ব্র্যান্ডিং, লোগো ডিজাইন এবং মোবাইল অ্যাপ UI কিট।
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <!--[if BLOCK]><![endif]-->                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <!--[if BLOCK]><![endif]-->                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Figma
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Adobe Illustrator
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Photoshop
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Brand System
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            </div>
+                        <!--[if ENDBLOCK]><![endif]-->                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <a 
+                            href="/portfolio/projects/fintech-neobank-identity" 
+                            class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1 transition">
+                            <span>বিস্তারিত দেখুন</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]-->                                <a 
+                                    href="https://example.com/case-study/paysphere" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    title="লাইভ ডেমো"
+                                    class="p-2 rounded-lg bg-[#8B5CF6]/20 hover:bg-[#8B5CF6]/40 text-[#8B5CF6] hover:text-white border border-[#8B5CF6]/30 transition">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between border border-[#8B5CF6]/20 hover:border-[#EC4899]/40">
+                <!-- Cover Image & Overlay -->
+                <div class="relative overflow-hidden aspect-[16/10] bg-slate-900">
+                    <img 
+                        src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" 
+                        alt="ভাইরাল এআই অবতার প্রডাক্ট লঞ্চ ভিডিও সিরিজ" 
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B18] via-[#080B18]/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    
+                    <!--[if BLOCK]><![endif]-->                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426]/90 backdrop-blur-md text-[#EC4899] border border-[#EC4899]/30">
+                            ভিডিও প্রোডাকশন
+                        </span>
+                    <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                        <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1">
+                            <i data-lucide="star" class="w-3 h-3 fill-amber-400 text-amber-400"></i> Featured
+                        </span>
+                    <!--[if ENDBLOCK]><![endif]-->                </div>
+
+                <!-- Content -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2 line-clamp-1">
+                            <a href="/portfolio/projects/viral-ai-avatar-campaign">
+                                ভাইরাল এআই অবতার প্রডাক্ট লঞ্চ ভিডিও সিরিজ
+                            </a>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] line-clamp-2 mb-4 leading-relaxed">
+                            এআই অবতার ও সিন্থেটিক ভয়েসওভার দিয়ে তৈরি হাই-ইমপ্যাক্ট সোশ্যাল ভিডিও সিরিজ।
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <!--[if BLOCK]><![endif]-->                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <!--[if BLOCK]><![endif]-->                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        AI Video Tools
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Premiere Pro
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        After Effects
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Audition
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            </div>
+                        <!--[if ENDBLOCK]><![endif]-->                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <a 
+                            href="/portfolio/projects/viral-ai-avatar-campaign" 
+                            class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1 transition">
+                            <span>বিস্তারিত দেখুন</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]-->                                <a 
+                                    href="https://example.com/demo/ai-videos" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    title="লাইভ ডেমো"
+                                    class="p-2 rounded-lg bg-[#8B5CF6]/20 hover:bg-[#8B5CF6]/40 text-[#8B5CF6] hover:text-white border border-[#8B5CF6]/30 transition">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between border border-[#8B5CF6]/20 hover:border-[#EC4899]/40">
+                <!-- Cover Image & Overlay -->
+                <div class="relative overflow-hidden aspect-[16/10] bg-slate-900">
+                    <img 
+                        src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" 
+                        alt="গ্লোবাল অর্গানিক সার্চ (SEO) এক্সপানশন" 
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B18] via-[#080B18]/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                    
+                    <!--[if BLOCK]><![endif]-->                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#111426]/90 backdrop-blur-md text-[#EC4899] border border-[#EC4899]/30">
+                            ডিজিটাল মার্কেটিং
+                        </span>
+                    <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                </div>
+
+                <!-- Content -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2 line-clamp-1">
+                            <a href="/portfolio/projects/global-organic-search-seo">
+                                গ্লোবাল অর্গানিক সার্চ (SEO) এক্সপানশন
+                            </a>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] line-clamp-2 mb-4 leading-relaxed">
+                            গুগলের শীর্ষস্থানে ৪০টির বেশি কিওয়ার্ড র্যাঙ্কিং এবং অর্গানিক ট্রাফিক তিনগুণ বৃদ্ধি।
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <!--[if BLOCK]><![endif]-->                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <!--[if BLOCK]><![endif]-->                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Ahrefs
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Semrush
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Google Search Console
+                                    </span>
+                                                                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#171B33] text-[#8B5CF6] border border-[#8B5CF6]/20">
+                                        Technical SEO
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            </div>
+                        <!--[if ENDBLOCK]><![endif]-->                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <a 
+                            href="/portfolio/projects/global-organic-search-seo" 
+                            class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1 transition">
+                            <span>বিস্তারিত দেখুন</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+
+                        <div class="flex items-center gap-2">
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]-->                                <a 
+                                    href="https://example.com/case-study/seo-cloudscale" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    title="লাইভ ডেমো"
+                                    class="p-2 rounded-lg bg-[#8B5CF6]/20 hover:bg-[#8B5CF6]/40 text-[#8B5CF6] hover:text-white border border-[#8B5CF6]/30 transition">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--[if ENDBLOCK]><![endif]-->    </div>
+</div>
+
+            <!-- View All Projects Button -->
+            <div class="text-center mt-12">
+                <a 
+                    href="/portfolio/projects/" 
+                    class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl glass-panel border border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 text-sm font-bold text-white hover:bg-[#8B5CF6]/10 transition shadow-lg">
+                    <span>সকল প্রজেক্ট দেখুন</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-[#8B5CF6]"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.6 EXPERIENCE & ACHIEVEMENTS SECTION -->
+    <section id="experience" class="py-20 relative" x-data="{ tab: 'work' }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                    আমার যাত্রাপথ
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">
+                    অভিজ্ঞতা ও শিক্ষাগত যোগ্যতা
+                </h2>
+                <p class="text-sm sm:text-base text-[#A1A1AA]">
+                    পেশাগত প্রবৃদ্ধি, প্রাতিষ্ঠানিক শিক্ষা ও স্বীকৃত আন্তর্জাতিক সার্টিফিকেশনের সারসংক্ষেপ।
+                </p>
+            </div>
+
+            <!-- Tabs Switcher -->
+            <div class="flex items-center justify-center gap-2 mb-12">
+                <button 
+                    @click="tab = 'work'" 
+                    type="button" 
+                    :class="{ 'bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white shadow-lg': tab === 'work', 'glass-panel text-[#A1A1AA] hover:text-white': tab !== 'work' }"
+                    class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition cursor-pointer">
+                    <i data-lucide="briefcase" class="w-4 h-4 inline-block mr-1.5"></i>
+                    কাজের অভিজ্ঞতা
+                </button>
+
+                <button 
+                    @click="tab = 'education'" 
+                    type="button" 
+                    :class="{ 'bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white shadow-lg': tab === 'education', 'glass-panel text-[#A1A1AA] hover:text-white': tab !== 'education' }"
+                    class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition cursor-pointer">
+                    <i data-lucide="graduation-cap" class="w-4 h-4 inline-block mr-1.5"></i>
+                    শিক্ষাগত যোগ্যতা
+                </button>
+
+                <button 
+                    @click="tab = 'certs'" 
+                    type="button" 
+                    :class="{ 'bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white shadow-lg': tab === 'certs', 'glass-panel text-[#A1A1AA] hover:text-white': tab !== 'certs' }"
+                    class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition cursor-pointer">
+                    <i data-lucide="award" class="w-4 h-4 inline-block mr-1.5"></i>
+                    স্বীকৃত সার্টিফিকেশন
+                </button>
+            </div>
+
+            <!-- Tab 1: Work Experience -->
+            <div x-show="tab === 'work'" class="max-w-4xl mx-auto space-y-6">
+                                    <div class="glass-card rounded-2xl p-6 sm:p-8 relative">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">সিনিয়র ডিজিটাল মার্কেটার ও লিড ওয়েব ডেভেলপার</h3>
+                                <p class="text-sm font-semibold text-[#8B5CF6]">নেক্সটজেন ডিজিটাল এজেন্সি</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                                    ২০২৪ - বর্তমান
+                                </span>
+                                <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-[#171B33] text-[#A1A1AA]">
+                                    ফুল-টাইম
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed mb-4">
+                            ই-কমার্স ও করপোরেট ক্লায়েন্টদের জন্য কাস্টম ওয়েব ডেভেলপমেন্ট পরিচালনা এবং পারফরম্যান্স মার্কেটিং ক্যাম্পেইনের নেতৃত্ব দেওয়া।
+                        </p>
+
+                                                    <ul class="space-y-1.5 pt-2 border-t border-white/5">
+                                                                    <li class="text-xs text-[#A1A1AA] flex items-start gap-2">
+                                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#EC4899] shrink-0 mt-0.5"></i>
+                                        <span>২৫টিরও বেশি সফল ওয়েব অ্যাপ্লিকেশন সফলভাবে সম্পন্ন ও ডেলিভারি</span>
+                                    </li>
+                                                                    <li class="text-xs text-[#A1A1AA] flex items-start gap-2">
+                                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#EC4899] shrink-0 mt-0.5"></i>
+                                        <span>ক্লায়েন্টদের বিজ্ঞাপনী বাজেটে গড়ে ৩.৮ গুণ সেলস নিশ্চিতকরণ</span>
+                                    </li>
+                                                                    <li class="text-xs text-[#A1A1AA] flex items-start gap-2">
+                                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#EC4899] shrink-0 mt-0.5"></i>
+                                        <span>এআই ভিডিও প্রোডাকশন প্রসেস চালু করে প্রোডাকশন সময় অর্ধেকে নামিয়ে আনা</span>
+                                    </li>
+                                                            </ul>
+                                            </div>
+                                    <div class="glass-card rounded-2xl p-6 sm:p-8 relative">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">ডিজিটাল মার্কেটিং স্পেশালিস্ট ও ফ্রন্টএন্ড ডেভেলপার</h3>
+                                <p class="text-sm font-semibold text-[#8B5CF6]">ক্রিয়েটিভ পালস মিডিয়া</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                                    ২০২২ - ২০২৩
+                                </span>
+                                <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-[#171B33] text-[#A1A1AA]">
+                                    ফুল-টাইম
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed mb-4">
+                            পেইড সার্চ ও ফেসবুক ক্যাম্পেইন পরিচালনা এবং হাই-কনভার্টিং ল্যান্ডিং পেজ ডিজাইন।
+                        </p>
+
+                                                    <ul class="space-y-1.5 pt-2 border-t border-white/5">
+                                                                    <li class="text-xs text-[#A1A1AA] flex items-start gap-2">
+                                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#EC4899] shrink-0 mt-0.5"></i>
+                                        <span>৩০টিরও বেশি আকর্ষণীয় ল্যান্ডিং পেজ ডিজাইন ও ডেভেলপমেন্ট</span>
+                                    </li>
+                                                                    <li class="text-xs text-[#A1A1AA] flex items-start gap-2">
+                                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#EC4899] shrink-0 mt-0.5"></i>
+                                        <span>১.৫ লাখ ডলারের বেশি অ্যাড বাজেট কার্যকরভাবে পরিচালনা</span>
+                                    </li>
+                                                                    <li class="text-xs text-[#A1A1AA] flex items-start gap-2">
+                                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#EC4899] shrink-0 mt-0.5"></i>
+                                        <span>সোশ্যাল মিডিয়া পেজে ১ লাখ ২০ হাজার নতুন অডিয়েন্স যুক্তকরণ</span>
+                                    </li>
+                                                            </ul>
+                                            </div>
+                                    <div class="glass-card rounded-2xl p-6 sm:p-8 relative">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">ওয়েব ডেভেলপার ও ডিজিটাল স্ট্র্যাটেজিস্ট</h3>
+                                <p class="text-sm font-semibold text-[#8B5CF6]">ফ্রিল্যান্স কনসালট্যান্ট ও ডেভেলপার</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                                    ২০২১ - ২০২২
+                                </span>
+                                <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-[#171B33] text-[#A1A1AA]">
+                                    কন্ট্রাক্ট
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed mb-4">
+                            বিশ্বব্যাপী ছোট ও মাঝারি উদ্যোক্তাদের জন্য ওয়েবসাইট তৈরি এবং অর্গানিক এসইও কনসালটেন্সি প্রদান।
+                        </p>
+
+                                                    <ul class="space-y-1.5 pt-2 border-t border-white/5">
+                                                                    <li class="text-xs text-[#A1A1AA] flex items-start gap-2">
+                                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#EC4899] shrink-0 mt-0.5"></i>
+                                        <span>২০টির বেশি ফ্রিল্যান্স প্রজেক্টে ফাইভ-স্টার রিভিউ লাভ</span>
+                                    </li>
+                                                                    <li class="text-xs text-[#A1A1AA] flex items-start gap-2">
+                                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#EC4899] shrink-0 mt-0.5"></i>
+                                        <span>লোকাল এসইও এর মাধ্যমে ব্যবসাগুলোর গুগল র্যাঙ্কিং নিশ্চিতকরণ</span>
+                                    </li>
+                                                            </ul>
+                                            </div>
+                            </div>
+
+            <!-- Tab 2: Education -->
+            <div x-show="tab === 'education'" style="display: none;" class="max-w-4xl mx-auto space-y-6">
+                                    <div class="glass-card rounded-2xl p-6 sm:p-8">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">বিএসসি ইন কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং</h3>
+                                <p class="text-sm font-semibold text-[#8B5CF6]">ঢাকা বিশ্ববিদ্যালয়</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30 self-start sm:self-auto">
+                                ২০১৯ - ২০২৩
+                            </span>
+                        </div>
+
+                                                    <p class="text-xs text-[#EC4899] font-medium mb-2">
+                                সফটওয়্যার ইঞ্জিনিয়ারিং ও ওয়েব টেকনোলজি
+                                                                    &bull; <span class="text-emerald-400">First Class Honors</span>
+                                                            </p>
+                        
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                            সফটওয়্যার আর্কিটেকচার, ডেটাবেস সিস্টেম এবং অ্যালগরিদমে প্রথম শ্রেণীতে ডিগ্রি সম্পন্ন।
+                        </p>
+                    </div>
+                                    <div class="glass-card rounded-2xl p-6 sm:p-8">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">প্রফেশনাল ডিপ্লোমা ইন ডিজিটাল মার্কেটিং</h3>
+                                <p class="text-sm font-semibold text-[#8B5CF6]">ডিজিটাল মার্কেটিং ইনস্টিটিউট</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30 self-start sm:self-auto">
+                                ২০২৩
+                            </span>
+                        </div>
+
+                                                    <p class="text-xs text-[#EC4899] font-medium mb-2">
+                                সার্চ মার্কেটিং, সোশ্যাল অ্যাডস ও অ্যানালিটিক্স
+                                                                    &bull; <span class="text-emerald-400">Distinction</span>
+                                                            </p>
+                        
+                        <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                            মাল্টি-চ্যানেল ডিজিটাল বিজ্ঞাপন, কনভার্সন অপ্টিমাইজেশন ও অ্যানালিটিক্সে ডিস্টিংকশন সহ সম্পন্ন।
+                        </p>
+                    </div>
+                            </div>
+
+            <!-- Tab 3: Certifications -->
+            <div x-show="tab === 'certs'" style="display: none;" class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-[#8B5CF6]/20 border border-[#8B5CF6]/30 flex items-center justify-center text-[#8B5CF6] mb-4">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold text-white mb-1">মেটা সার্টিফাইড ডিজিটাল মার্কেটিং অ্যাসোসিয়েট</h3>
+                            <p class="text-xs font-semibold text-[#EC4899] mb-3">মেটা (ফেসবুক)</p>
+                                                            <p class="text-[11px] font-mono text-[#A1A1AA]">
+                                    আইডি: META-DM-892401
+                                </p>
+                                                    </div>
+
+                                                    <div class="pt-4 mt-4 border-t border-white/5">
+                                <a 
+                                    href="https://www.credly.com" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1 transition">
+                                    <span>সার্টিফিকেট যাচাই করুন</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                                            </div>
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-[#8B5CF6]/20 border border-[#8B5CF6]/30 flex items-center justify-center text-[#8B5CF6] mb-4">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold text-white mb-1">গুগল অ্যাডস সার্চ ও মেজারমেন্ট সার্টিফিকেশন</h3>
+                            <p class="text-xs font-semibold text-[#EC4899] mb-3">গুগল স্কিলশপ</p>
+                                                            <p class="text-[11px] font-mono text-[#A1A1AA]">
+                                    আইডি: GOOG-SEARCH-77319
+                                </p>
+                                                    </div>
+
+                                                    <div class="pt-4 mt-4 border-t border-white/5">
+                                <a 
+                                    href="https://skillshop.exceedlms.com" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1 transition">
+                                    <span>সার্টিফিকেট যাচাই করুন</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                                            </div>
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-[#8B5CF6]/20 border border-[#8B5CF6]/30 flex items-center justify-center text-[#8B5CF6] mb-4">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold text-white mb-1">হাবস্পট ইনবাউন্ড ও কনটেন্ট মার্কেটিং সার্টিফিকেশন</h3>
+                            <p class="text-xs font-semibold text-[#EC4899] mb-3">হাবস্পট একাডেমি</p>
+                                                            <p class="text-[11px] font-mono text-[#A1A1AA]">
+                                    আইডি: HS-INB-66291
+                                </p>
+                                                    </div>
+
+                                                    <div class="pt-4 mt-4 border-t border-white/5">
+                                <a 
+                                    href="https://academy.hubspot.com" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1 transition">
+                                    <span>সার্টিফিকেট যাচাই করুন</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                                            </div>
+                                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-[#8B5CF6]/20 border border-[#8B5CF6]/30 flex items-center justify-center text-[#8B5CF6] mb-4">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold text-white mb-1">অ্যাডভান্সড লারাভেল ও রেস্ট এপিআই</h3>
+                            <p class="text-xs font-semibold text-[#EC4899] mb-3">লারাভেল ইকোসিস্টেম গিল্ড</p>
+                                                            <p class="text-[11px] font-mono text-[#A1A1AA]">
+                                    আইডি: LARAVEL-DEV-4102
+                                </p>
+                                                    </div>
+
+                                                    <div class="pt-4 mt-4 border-t border-white/5">
+                                <a 
+                                    href="https://laracasts.com" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1 transition">
+                                    <span>সার্টিফিকেট যাচাই করুন</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                                            </div>
+                            </div>
+        </div>
+    </section>
+
+    <!-- 4.7 BLOG SECTION -->
+    <section id="blog" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+                <span class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                    নিবন্ধ ও ভাবনা
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">
+                    আমার ব্লগ ডায়েরি
+                </h2>
+                <p class="text-sm sm:text-base text-[#A1A1AA]">
+                    ডিজিটাল গ্রোথ, আধুনিক ওয়েব আর্কিটেকচার এবং নতুন প্রযুক্তির উপর দরকারি বিশ্লেষণ।
+                </p>
+            </div>
+
+            <!-- 3 Latest Posts Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                    <article class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                        <div class="relative aspect-[16/10] overflow-hidden bg-slate-900">
+                            <img 
+                                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" 
+                                alt="২০২৬ সালে ই-কমার্স বিজনেসে মেটা বিজ্ঞাপনে সর্বোচ্চ আরওআই অর্জনের কৌশল"
+                                loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            >
+                                                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-semibold bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                    ডিজিটাল মার্কেটিং
+                                </span>
+                                                    </div>
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-3 text-[11px] text-[#A1A1AA] mb-2">
+                                    <span>Nov 15, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>6 min read</span>
+                                </div>
+
+                                <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2 line-clamp-2">
+                                    <a href="/portfolio/blog/maximize-meta-ads-roas-2026">
+                                        ২০২৬ সালে ই-কমার্স বিজনেসে মেটা বিজ্ঞাপনে সর্বোচ্চ আরওআই অর্জনের কৌশল
+                                    </a>
+                                </h3>
+
+                                <p class="text-xs text-[#A1A1AA] line-clamp-3 leading-relaxed mb-4">
+                                    মেটা বিজ্ঞাপনে ক্রিয়েটিভ টেস্টিং, কনভার্সন এপিআই ও কাস্টমার রিটেনশনের মাধ্যমে কিভাবে সেলস বহুগুণ বাড়ানো যায় জানুন এই ব্লগে।
+                                </p>
+                            </div>
+
+                            <div class="pt-4 border-t border-white/5">
+                                <a 
+                                    href="/portfolio/blog/maximize-meta-ads-roas-2026" 
+                                    class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                    <span>সম্পূর্ণ পড়ুন</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                                    <article class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                        <div class="relative aspect-[16/10] overflow-hidden bg-slate-900">
+                            <img 
+                                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" 
+                                alt="কেন লারাভেল এবং লাইভওয়্যার আধুনিক ফুল-স্ট্যাক ওয়েবের সেরা পছন্দ"
+                                loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            >
+                                                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-semibold bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                    ওয়েব ডেভেলপমেন্ট
+                                </span>
+                                                    </div>
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-3 text-[11px] text-[#A1A1AA] mb-2">
+                                    <span>Nov 08, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>5 min read</span>
+                                </div>
+
+                                <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2 line-clamp-2">
+                                    <a href="/portfolio/blog/why-laravel-livewire-fullstack">
+                                        কেন লারাভেল এবং লাইভওয়্যার আধুনিক ফুল-স্ট্যাক ওয়েবের সেরা পছন্দ
+                                    </a>
+                                </h3>
+
+                                <p class="text-xs text-[#A1A1AA] line-clamp-3 leading-relaxed mb-4">
+                                    জটিল এসপিএ বা আলাদা এপিআই ছাড়াই অত্যন্ত দ্রুত এবং ডায়নামিক ওয়েবসাইট তৈরি করতে লাইভওয়্যার কেন অতুলনীয়।
+                                </p>
+                            </div>
+
+                            <div class="pt-4 border-t border-white/5">
+                                <a 
+                                    href="/portfolio/blog/why-laravel-livewire-fullstack" 
+                                    class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                    <span>সম্পূর্ণ পড়ুন</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                                    <article class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                        <div class="relative aspect-[16/10] overflow-hidden bg-slate-900">
+                            <img 
+                                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" 
+                                alt="এআই ভিডিও প্রোডাকশনের মাধ্যমে ব্যবসার বিক্রি বাড়ানোর উপায়"
+                                loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            >
+                                                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-semibold bg-[#111426] text-[#EC4899] border border-[#EC4899]/30">
+                                    এআই ও প্রযুক্তি
+                                </span>
+                                                    </div>
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-3 text-[11px] text-[#A1A1AA] mb-2">
+                                    <span>Nov 02, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>4 min read</span>
+                                </div>
+
+                                <h3 class="text-base font-bold text-white group-hover:text-[#EC4899] transition-colors mb-2 line-clamp-2">
+                                    <a href="/portfolio/blog/business-growth-ai-video-production">
+                                        এআই ভিডিও প্রোডাকশনের মাধ্যমে ব্যবসার বিক্রি বাড়ানোর উপায়
+                                    </a>
+                                </h3>
+
+                                <p class="text-xs text-[#A1A1AA] line-clamp-3 leading-relaxed mb-4">
+                                    কৃত্রিম বুদ্ধিমত্তার সাহায্যে কম খরচে ও দ্রুততম সময়ে আকর্ষণীয় বিজ্ঞাপনী ভিডিও তৈরি করে সোশ্যাল মিডিয়া ব্র্যান্ডিং কীভাবে দ্রুত বাড়ানো যায়।
+                                </p>
+                            </div>
+
+                            <div class="pt-4 border-t border-white/5">
+                                <a 
+                                    href="/portfolio/blog/business-growth-ai-video-production" 
+                                    class="text-xs font-semibold text-[#8B5CF6] hover:text-[#EC4899] flex items-center gap-1.5 transition">
+                                    <span>সম্পূর্ণ পড়ুন</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                            </div>
+
+            <!-- View All Blogs Link -->
+            <div class="text-center mt-12">
+                <a 
+                    href="/portfolio/blog/" 
+                    class="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass-panel border border-[#8B5CF6]/30 text-xs font-bold text-white hover:border-[#8B5CF6]/60 hover:bg-[#8B5CF6]/10 transition">
+                    <span>সকল ব্লগ নিবন্ধ পড়ুন</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-[#8B5CF6]"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.8 CONTACT SECTION (PRD WhatsApp, Email, Form, Rate Limiting) -->
+    <section id="contact" class="py-20 relative bg-[#111426]/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#111426] text-[#8B5CF6] border border-[#8B5CF6]/30">
+                    যোগাযোগ করুন
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">
+                    নতুন কোনো প্রজেক্ট নিয়ে ভাবছেন? চলুন কথা বলি!
+                </h2>
+                <p class="text-sm sm:text-base text-[#A1A1AA]">
+                    উচ্চ গতির ওয়েবসাইট, বিজ্ঞাপনী প্রচারণা বা ক্রিয়েটিভ ভিডিও — আমি আপনার সাথে কাজ করতে প্রস্তুত।
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <!-- Left: Quick Contact Info & Direct Links -->
+                <div class="lg:col-span-5 space-y-6">
+                    <!-- WhatsApp Highlight Box -->
+                    <div class="p-6 rounded-2xl glass-card border border-emerald-500/30 bg-emerald-950/10">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-white">WhatsApp</h4>
+                                <p class="text-xs text-emerald-400 font-mono">+8801938267920</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-[#A1A1AA] mb-4">
+                            হোয়াটসঅ্যাপে দ্রুত রেসপন্স পাওয়া যাবে
+                        </p>
+                        <a 
+                            href="https://wa.me/8801938267920" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25 transition">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>হোয়াটসঅ্যাপে চ্যাট করুন</span>
+                        </a>
+                    </div>
+
+                    <!-- Direct Email Box (with Mailto button, Mail icon, and Copy Email button) -->
+                    <div class="p-6 rounded-2xl glass-card" x-data="{ copied: false }">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-12 h-12 rounded-xl bg-[#8B5CF6]/20 flex items-center justify-center text-[#8B5CF6] shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div class="min-w-0 flex-1">
+                                <h4 class="text-base font-bold text-white">সরাসরি ইমেইল পাঠান</h4>
+                                <a href="mailto:ashikaaktar99@gmail.com" class="text-xs sm:text-sm font-semibold text-[#8B5CF6] hover:text-[#EC4899] transition block truncate">
+                                    ashikaaktar99@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-xs text-[#A1A1AA] mb-4">
+                            সাধারণত ১২ ঘণ্টার মধ্যে উত্তর দেওয়া হয়।
+                        </p>
+
+                        <!-- Action Buttons: Clickable Mailto Button & Copy Email Button -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-3 border-t border-white/5">
+                            <a 
+                                href="mailto:ashikaaktar99@gmail.com" 
+                                class="w-full py-2.5 px-3 rounded-xl gradient-btn text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition shadow-sm hover:scale-[1.02] active:scale-95">
+                                <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+                                <span>ইমেইল পাঠান</span>
+                            </a>
+                            <button 
+                                type="button" 
+                                @click="navigator.clipboard.writeText('ashikaaktar99@gmail.com'); copied = true; setTimeout(() => copied = false, 2500)"
+                                class="w-full py-2.5 px-3 rounded-xl glass-panel border border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition cursor-pointer hover:scale-[1.02] active:scale-95">
+                                <span x-show="!copied" class="inline-flex items-center gap-1.5">
+                                    <i data-lucide="copy" class="w-3.5 h-3.5 text-[#8B5CF6]"></i>
+                                    <span>ইমেইল কপি</span>
+                                </span>
+                                <span x-show="copied" style="display: none;" class="inline-flex items-center gap-1.5 text-emerald-400">
+                                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                                    <span>কপি হয়েছে!</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Location & Availability -->
+                    <div class="p-6 rounded-2xl glass-card">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#EC4899]/20 flex items-center justify-center text-[#EC4899]">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-white">
+                                    অবস্থান
+                                </h4>
+                                <p class="text-xs text-[#A1A1AA]">
+                                    ঢাকা, বাংলাদেশ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Livewire Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card rounded-3xl p-6 sm:p-8">
+                        <h3 class="text-xl font-bold text-white mb-2">
+                            একটি বার্তা পাঠান
+                        </h3>
+                        <p class="text-xs text-[#A1A1AA] mb-6">
+                            ফর্মটি পূরণ করুন এবং আপনার প্রজেক্ট সম্পর্কে জানান।
+                        </p>
+
+                        <!-- Livewire Component -->
+                        <div wire:key="lw-3316153410-1-1-5" wire:snapshot="{&quot;data&quot;:{&quot;name&quot;:&quot;&quot;,&quot;email&quot;:&quot;&quot;,&quot;subject&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;,&quot;isSubmitted&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;4K7lZufxnoxxOTVTWxWP&quot;,&quot;name&quot;:&quot;contact-form&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;bn&quot;,&quot;islands&quot;:[]},&quot;checksum&quot;:&quot;d3be524a430ddf4a83b123c6966d87d4ace5f135b7a2d7d599f9a34b84097eb6&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="4K7lZufxnoxxOTVTWxWP" wire:name="contact-form">
+    <!--[if BLOCK]><![endif]-->        <form wire:submit="submit" class="space-y-4">
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-1.5">
+                        আপনার নাম <span class="text-[#EC4899]">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        wire:model="name"
+                        placeholder="যেমন: তানভীর আহমেদ" 
+                        class="w-full px-4 py-3 rounded-xl glass-input text-sm "
+                        required
+                    >
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-1.5">
+                        আপনার ইমেইল <span class="text-[#EC4899]">*</span>
+                    </label>
+                    <input 
+                        type="email" 
+                        wire:model="email"
+                        placeholder="যেমন: tanvir@example.com" 
+                        class="w-full px-4 py-3 rounded-xl glass-input text-sm "
+                        required
+                    >
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-1.5">
+                    বিষয় <span class="text-[#EC4899]">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    wire:model="subject"
+                    placeholder="আপনার প্রজেক্টের সংক্ষিপ্ত বিষয়..." 
+                    class="w-full px-4 py-3 rounded-xl glass-input text-sm "
+                    required
+                >
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->            </div>
+
+            <div>
+                <label class="block text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-1.5">
+                    বার্তা <span class="text-[#EC4899]">*</span>
+                </label>
+                <textarea 
+                    wire:model="message"
+                    rows="4"
+                    placeholder="প্রজেক্টের বিবরণ, সময়সীমা ও প্রয়োজনীয়তা লিখুন..." 
+                    class="w-full px-4 py-3 rounded-xl glass-input text-sm "
+                    required
+                ></textarea>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->            </div>
+
+            <button 
+                type="submit" 
+                wire:loading.attr="disabled"
+                class="w-full py-3.5 px-6 rounded-xl gradient-btn font-semibold text-sm text-white flex items-center justify-center gap-2 group cursor-pointer transition">
+                <span wire:loading.remove>
+                    <i data-lucide="send" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                    বার্তা পাঠান
+                </span>
+                <span wire:loading class="flex items-center gap-2">
+                    <svg class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    বার্তা পাঠানো হচ্ছে...
+                </span>
+            </button>
+        </form>
+    <!--[if ENDBLOCK]><![endif]--></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- WhatsApp Floating Action Button (PRD Requirement) -->
+    <aside aria-label="WhatsApp Contact" class="fixed bottom-6 right-6 z-40 group">
+        <a 
+            href="https://wa.me/8801938267920" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            title="Chat with Ashika on WhatsApp (+8801938267920)"
+            class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-xl shadow-emerald-500/30 hover:scale-110 active:scale-95 transition-all">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.06-1.579-.311-.994-.39-1.928-1.282-2.39-1.897-.061-.082-.472-.631-.472-1.203 0-.572.299-.854.405-.97.106-.116.233-.146.311-.146.078 0 .156 0 .224.004.072.004.168-.027.263.201.099.239.336.822.366.883.03.061.05.132.01.212-.041.08-.061.13-.121.2-.061.07-.128.156-.183.21-.061.061-.125.127-.054.249.071.122.316.52.678.842.466.415.859.544.981.605.122.061.194.053.266-.03.072-.084.311-.362.394-.486.083-.124.167-.104.281-.062.114.042.724.341.849.403.125.062.208.093.239.146.03.053.03.309-.114.714z"/>
+            </svg>
+            <span class="absolute right-16 top-2.5 px-3 py-1 rounded-lg bg-slate-900/90 text-emerald-400 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-emerald-500/20 shadow-lg">
+                WhatsApp: +8801938267920
+            </span>
+        </a>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="mt-28 border-t border-[#8B5CF6]/15 bg-[#080B18] relative z-10 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1: Brand Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-9 h-9 rounded-xl gradient-btn flex items-center justify-center font-extrabold text-base text-white">
+                            A
+                        </div>
+                        <span class="text-xl font-black tracking-wider text-white">
+                            ASHIKA
+                        </span>
+                    </div>
+                    <p class="text-[#A1A1AA] text-sm max-w-md leading-relaxed mb-6">
+                        ডিজিটাল মার্কেটার এবং ফুল-স্ট্যাক ডেভেলপার — ব্র্যান্ড গ্রোথ ও আধুনিক ডিজিটাল সমাধানের বিশ্বস্ত পার্টনার।
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/8801938267920" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-emerald-400 hover:border-emerald-500/40 transition">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/ashika" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-[#06D4F4] hover:border-[#06D4F4]/40 transition">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://github.com/ashika" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-white hover:border-[#8B5CF6]/40 transition">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://facebook.com/ashika.digital" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg glass-panel flex items-center justify-center text-[#A1A1AA] hover:text-[#EC4899] hover:border-[#EC4899]/40 transition">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-[#EC4899] mb-4">
+                        প্রয়োজনীয় লিংক
+                    </h4>
+                    <ul class="space-y-2 text-sm text-[#A1A1AA]">
+                        <li><a href="#about" class="hover:text-white transition">আমার সম্পর্কে</a></li>
+                        <li><a href="#skills" class="hover:text-white transition">দক্ষতা</a></li>
+                        <li><a href="#services" class="hover:text-white transition">সার্ভিসসমূহ</a></li>
+                        <li><a href="/portfolio/projects/" class="hover:text-white transition">পোর্টফোলিও</a></li>
+                        <li><a href="/portfolio/blog/" class="hover:text-white transition">ব্লগ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-[#EC4899] mb-4">
+                        যোগাযোগের তথ্য
+                    </h4>
+                    <ul class="space-y-3 text-sm text-[#A1A1AA]">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-[#8B5CF6]"></i>
+                            <a href="tel:+8801938267920" class="hover:text-white transition">+8801938267920</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-[#8B5CF6]"></i>
+                            <a href="mailto:ashikaaktar99@gmail.com" class="hover:text-white transition">ashikaaktar99@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-[#8B5CF6]"></i>
+                            <span>ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li class="pt-2">
+                            <a href="/admin" class="text-xs text-[#71717A] hover:text-[#8B5CF6] transition flex items-center gap-1">
+                                <i data-lucide="lock" class="w-3 h-3"></i> Admin Control Panel
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-[#71717A] gap-4">
+                <p>&copy; 2026 ASHIKA. সর্বস্বত্ব সংরক্ষিত।</p>
+                <p>আশিকা কর্তৃক ভালোবাসায় ডিজাইন ও ডেভেলপকৃত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Livewire Scripts -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+    var form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var inputs = form.querySelectorAll('input');
+            var textarea = form.querySelector('textarea');
+            var name = inputs[0] ? inputs[0].value : '';
+            var email = inputs[1] ? inputs[1].value : '';
+            var subject = inputs[2] ? inputs[2].value : '';
+            var message = textarea ? textarea.value : '';
+            
+            var text = "Hello Ashika!%0A*Name:* " + encodeURIComponent(name) + "%0A*Email:* " + encodeURIComponent(email) + "%0A*Subject:* " + encodeURIComponent(subject) + "%0A*Message:* " + encodeURIComponent(message);
+            window.open("https://wa.me/8801938267920?text=" + text, "_blank");
+        });
+    }
+});
+</script>
+</body>
+</html>

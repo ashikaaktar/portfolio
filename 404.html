@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="csrf-token" content="T2hEgd4ONPQ4TDCecMQkBlg711W5goahTSZ3Dh8c">
+    <meta name="csrf-token" content="ilnWmjR40YqVHbaeyYZ3LSuyCtM9W2QW6Ltuz0lg">
 
     <title>ASHIKA – Digital Marketer &amp; Developer | Personal Portfolio</title>
     <meta name="description" content="Combining modern web development with data-driven marketing strategies to accelerate brand growth and build memorable digital products.">
@@ -13,7 +13,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://127.0.0.1:8005">
+    <meta property="og:url" content="/portfolio/">
     <meta property="og:title" content="ASHIKA – Digital Marketer &amp; Developer">
     <meta property="og:description" content="I Build Digital Experiences &amp; Grow Businesses.">
     <meta property="og:image" content="/portfolio/images/og-cover.jpg">
@@ -52,7 +52,7 @@
         "@type": "Person",
         "name": "Ashika",
         "jobTitle": "Digital Marketer & Developer",
-        "url": "http://127.0.0.1:8005",
+        "url": "/portfolio/",
         "sameAs": [
             "https://linkedin.com/in/ashika",
             "https://github.com/ashika",
@@ -61,233 +61,7 @@
         "knowsAbout": ["Digital Marketing", "Web Development", "Laravel", "SEO", "Meta Ads", "Google Ads"]
     }
     </script>
-<script id="browser-logger-active">
-(function() {
-    const ENDPOINT = '/portfolio/_boost/browser-logs';
-    const logQueue = [];
-    let flushTimeout = null;
-    const captureTypes = ["error","warning","info","log","debug","table"];
 
-    console.log('🔍 Browser logger active (MCP server detected). Posting to: ' + ENDPOINT);
-
-    // Store original console methods
-    const originalConsole = {
-        log: console.log,
-        debug: console.debug,
-        info: console.info,
-        error: console.error,
-        warn: console.warn,
-        table: console.table
-    };
-
-    // Walk own enumerable keys so JSON.stringify cannot auto-invoke a proxy fake toJSON (e.g. Livewire's `$wire`) and fire a real request.
-    function toSafeValue(value, seen) {
-        if (value === null || typeof value !== 'object') {
-            return value;
-        }
-        if (value instanceof Error) {
-            return { name: value.name, message: value.message, stack: value.stack };
-        }
-        // Date has no own enumerable keys, so the walk below would collapse it to {}.
-        if (value instanceof Date) {
-            return value.toISOString();
-        }
-        if (seen.has(value)) {
-            return '[Circular]';
-        }
-        seen.add(value);
-        if (Array.isArray(value)) {
-            return value.map((item) => toSafeValue(item, seen));
-        }
-        const plain = {};
-        for (const key of Object.keys(value)) {
-            if (key === 'toJSON') continue;
-            try {
-                plain[key] = toSafeValue(value[key], seen);
-            } catch (e) {
-                plain[key] = '[Unreadable]';
-            }
-        }
-        return plain;
-    }
-
-    // Helper to safely stringify values
-    function safeStringify(obj) {
-        return JSON.stringify(toSafeValue(obj, new WeakSet()));
-    }
-
-    // Normalize log type for consistency (e.g., 'warn' to 'warning')
-    function normalizeType(type) {
-        return type === 'warn' ? 'warning' : type;
-    }
-
-    // Determine if a log type should be captured based on configured levels
-    function shouldCapture(type) {
-        return captureTypes.includes(normalizeType(type));
-    }
-
-    // Batch and send logs
-    function flushLogs() {
-        if (logQueue.length === 0) return;
-
-        const batch = logQueue.splice(0, logQueue.length);
-
-        fetch(ENDPOINT, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest'
-            },
-            body: JSON.stringify({ logs: batch })
-        }).catch(err => {
-            // Silently fail to avoid infinite loops
-            originalConsole.error('Failed to send logs:', err);
-        });
-    }
-
-    // Debounced flush (100ms)
-    function scheduleFlush() {
-        if (flushTimeout) clearTimeout(flushTimeout);
-        flushTimeout = setTimeout(flushLogs, 100);
-    }
-
-    // Intercept console methods
-    ['log', 'debug', 'info', 'error', 'warn', 'table'].forEach(method => {
-        console[method] = function(...args) {
-            // Call original method
-            originalConsole[method].apply(console, args);
-
-            // Capture log data
-            try {
-                if (!shouldCapture(method)) {
-                    return;
-                }
-
-                logQueue.push({
-                    type: method,
-                    timestamp: new Date().toISOString(),
-                    data: args.map(arg => {
-                        try {
-                            return typeof arg === 'object' ? JSON.parse(safeStringify(arg)) : arg;
-                        } catch (e) {
-                            return String(arg);
-                        }
-                    }),
-                    url: window.location.href,
-                    userAgent: navigator.userAgent
-                });
-
-                scheduleFlush();
-            } catch (e) {
-                // Fail silently
-            }
-        };
-    });
-
-    // Global error handlers for uncaught errors
-    const originalOnError = window.onerror;
-    window.onerror = function boostErrorHandler(errorMsg, url, lineNumber, colNumber, error) {
-        try {
-            if (shouldCapture('error')) {
-                logQueue.push({
-                    type: 'uncaught_error',
-                    timestamp: new Date().toISOString(),
-                    data: [{
-                        message: errorMsg,
-                        filename: url,
-                        lineno: lineNumber,
-                        colno: colNumber,
-                        error: error ? {
-                            name: error.name,
-                            message: error.message,
-                            stack: error.stack
-                        } : null
-                    }],
-                    url: window.location.href,
-                    userAgent: navigator.userAgent
-                });
-
-                scheduleFlush();
-            }
-
-        } catch (e) {
-            // Fail silently
-        }
-
-        // Call original handler if it exists
-        if (originalOnError && typeof originalOnError === 'function') {
-            return originalOnError(errorMsg, url, lineNumber, colNumber, error);
-        }
-
-        // Let the error continue to propagate
-        return false;
-    }
-    window.addEventListener('error', (event) => {
-        try {
-            if (!shouldCapture('error')) {
-                return false;
-            }
-
-            logQueue.push({
-                type: 'window_error',
-                timestamp: new Date().toISOString(),
-                data: [{
-                    message: event.message,
-                    filename: event.filename,
-                    lineno: event.lineno,
-                    colno: event.colno,
-                    error: event.error ? {
-                        name: event.error.name,
-                        message: event.error.message,
-                        stack: event.error.stack
-                    } : null
-                }],
-                url: window.location.href,
-                userAgent: navigator.userAgent
-            });
-
-            scheduleFlush();
-        } catch (e) {
-            // Fail silently
-        }
-
-        // Let the error continue to propagate
-        return false;
-    });
-    window.addEventListener('unhandledrejection', (event) => {
-        try {
-            if (!shouldCapture('error')) {
-                return false;
-            }
-
-            logQueue.push({
-                type: 'error',
-                timestamp: new Date().toISOString(),
-                data: [{
-                    message: 'Unhandled Promise Rejection',
-                    reason: toSafeValue(event.reason, new WeakSet())
-                }],
-                url: window.location.href,
-                userAgent: navigator.userAgent
-            });
-
-            scheduleFlush();
-        } catch (e) {
-            // Fail silently
-        }
-
-        // Let the rejection continue to propagate
-        return false;
-    });
-
-    // Flush on page unload
-    window.addEventListener('beforeunload', () => {
-        if (logQueue.length > 0) {
-            navigator.sendBeacon(ENDPOINT, JSON.stringify({ logs: logQueue }));
-        }
-    });
-})();
-</script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -316,14 +90,14 @@
     </div>
 
     <!-- Navigation Header -->
-    <header x-data="{ mobileOpen: false, scrolled: false }" 
+        <header x-data="{ mobileOpen: false, scrolled: false }" 
             x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 20 })"
             :class="{ 'bg-[#080B18]/90 backdrop-blur-xl border-b border-[#8B5CF6]/20 py-3 shadow-lg shadow-black/40': scrolled, 'bg-transparent py-5': !scrolled }"
             class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between">
                 <!-- Brand Logo -->
-                <a href="http://127.0.0.1:8005" class="flex items-center gap-2 group">
+                <a href="#home" class="flex items-center gap-2 group">
                     <div class="w-10 h-10 rounded-xl gradient-btn flex items-center justify-center font-extrabold text-lg text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-105 transition-transform">
                         A
                     </div>
@@ -340,28 +114,28 @@
 
                 <!-- Desktop Navigation Menu -->
                 <nav class="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full glass-panel border border-white/10 shadow-inner">
-                    <a href="http://127.0.0.1:8005#home" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="#home" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         Home
                     </a>
-                    <a href="http://127.0.0.1:8005#about" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="#about" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         About
                     </a>
-                    <a href="http://127.0.0.1:8005#skills" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="#skills" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         Skills
                     </a>
-                    <a href="http://127.0.0.1:8005#services" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="#services" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         Services
                     </a>
-                    <a href="http://127.0.0.1:8005#portfolio" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="#portfolio" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         Portfolio
                     </a>
-                    <a href="http://127.0.0.1:8005#experience" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="#experience" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         Experience
                     </a>
-                    <a href="http://127.0.0.1:8005#blog" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="#blog" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         Blog
                     </a>
-                    <a href="http://127.0.0.1:8005#contact" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="#contact" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         Contact
                     </a>
                 </nav>
@@ -371,19 +145,19 @@
                     <!-- Language Switcher -->
                     <div class="flex items-center p-1 rounded-xl glass-panel border border-white/10">
                         <a 
-                            href="/portfolio/locale/en" 
+                            href="/portfolio/" 
                             class="px-2.5 py-1 rounded-lg text-xs font-bold transition bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white shadow-sm">
                             EN
                         </a>
                         <a 
-                            href="/portfolio/locale/bn" 
+                            href="/portfolio/bn/" 
                             class="px-2.5 py-1 rounded-lg text-xs font-bold transition text-[#A1A1AA] hover:text-white">
                             বাং
                         </a>
                     </div>
 
                     <!-- Let's Talk CTA -->
-                    <a href="http://127.0.0.1:8005#contact" class="px-5 py-2.5 rounded-xl gradient-btn text-xs font-bold text-white flex items-center gap-1.5 transition">
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl gradient-btn text-xs font-bold text-white flex items-center gap-1.5 transition">
                         <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
                         <span>Let&#039;s Talk</span>
                     </a>
@@ -394,12 +168,12 @@
                     <!-- Mobile Language Switcher -->
                     <div class="flex items-center p-0.5 rounded-lg glass-panel border border-white/10">
                         <a 
-                            href="/portfolio/locale/en" 
+                            href="/portfolio/" 
                             class="px-2 py-0.5 rounded text-[11px] font-bold bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white">
                             EN
                         </a>
                         <a 
-                            href="/portfolio/locale/bn" 
+                            href="/portfolio/bn/" 
                             class="px-2 py-0.5 rounded text-[11px] font-bold text-[#A1A1AA]">
                             বাং
                         </a>
@@ -429,33 +203,33 @@
             @click.away="mobileOpen = false" 
             class="md:hidden glass-panel border-b border-[#8B5CF6]/20 px-6 py-6 mt-3 space-y-3 shadow-2xl"
             style="display: none;">
-            <a @click="mobileOpen = false" href="http://127.0.0.1:8005#home" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="#home" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 Home
             </a>
-            <a @click="mobileOpen = false" href="http://127.0.0.1:8005#about" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="#about" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 About
             </a>
-            <a @click="mobileOpen = false" href="http://127.0.0.1:8005#skills" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="#skills" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 Skills
             </a>
-            <a @click="mobileOpen = false" href="http://127.0.0.1:8005#services" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="#services" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 Services
             </a>
-            <a @click="mobileOpen = false" href="http://127.0.0.1:8005#portfolio" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="#portfolio" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 Portfolio
             </a>
-            <a @click="mobileOpen = false" href="http://127.0.0.1:8005#experience" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="#experience" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 Experience
             </a>
-            <a @click="mobileOpen = false" href="http://127.0.0.1:8005#blog" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="#blog" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 Blog
             </a>
-            <a @click="mobileOpen = false" href="http://127.0.0.1:8005#contact" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="#contact" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 Contact
             </a>
 
             <div class="pt-2">
-                <a @click="mobileOpen = false" href="http://127.0.0.1:8005#contact" class="w-full py-3 rounded-xl gradient-btn text-center text-sm font-bold text-white flex items-center justify-center gap-2">
+                <a @click="mobileOpen = false" href="#contact" class="w-full py-3 rounded-xl gradient-btn text-center text-sm font-bold text-white flex items-center justify-center gap-2">
                     <i data-lucide="message-square" class="w-4 h-4"></i>
                     <span>Let&#039;s Talk</span>
                 </a>
@@ -1481,7 +1255,7 @@
             </div>
 
             <!-- Livewire Project Filter Component -->
-            <div wire:key="lw-3316153410-0" wire:snapshot="{&quot;data&quot;:{&quot;selectedCategory&quot;:null,&quot;limit&quot;:6,&quot;showAll&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;QggzqwYZ0GqBJxbmGBFi&quot;,&quot;name&quot;:&quot;project-filter&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;,&quot;islands&quot;:[]},&quot;checksum&quot;:&quot;6d5ef48937f8fb0ebb60e43eef4c0e089eea41c9931b5fd59557823d2e1a3ea0&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="QggzqwYZ0GqBJxbmGBFi" wire:name="project-filter">
+            <div wire:key="lw-3316153410-0" wire:snapshot="{&quot;data&quot;:{&quot;selectedCategory&quot;:null,&quot;limit&quot;:6,&quot;showAll&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;HRhiE9Ow5KykhmAfT21R&quot;,&quot;name&quot;:&quot;project-filter&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;,&quot;islands&quot;:[]},&quot;checksum&quot;:&quot;28deadae06d1c00ea6e7c2f51905841ee76d7d1fd953d627ecb54c95f3aa9437&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="HRhiE9Ow5KykhmAfT21R" wire:name="project-filter">
     <!-- Category Filter Tabs -->
     <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
         <button 
@@ -1973,7 +1747,7 @@
             <!-- View All Projects Button -->
             <div class="text-center mt-12">
                 <a 
-                    href="/portfolio/projects" 
+                    href="/portfolio/projects/" 
                     class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl glass-panel border border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 text-sm font-bold text-white hover:bg-[#8B5CF6]/10 transition shadow-lg">
                     <span>Explore Full Project Archive</span>
                     <i data-lucide="arrow-right" class="w-4 h-4 text-[#8B5CF6]"></i>
@@ -2424,7 +2198,7 @@
             <!-- View All Blogs Link -->
             <div class="text-center mt-12">
                 <a 
-                    href="/portfolio/blog" 
+                    href="/portfolio/blog/" 
                     class="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass-panel border border-[#8B5CF6]/30 text-xs font-bold text-white hover:border-[#8B5CF6]/60 hover:bg-[#8B5CF6]/10 transition">
                     <span>Browse All Articles</span>
                     <i data-lucide="arrow-right" class="w-4 h-4 text-[#8B5CF6]"></i>
@@ -2546,7 +2320,7 @@
                         </p>
 
                         <!-- Livewire Component -->
-                        <div wire:key="lw-3316153410-1-1-5" wire:snapshot="{&quot;data&quot;:{&quot;name&quot;:&quot;&quot;,&quot;email&quot;:&quot;&quot;,&quot;subject&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;,&quot;isSubmitted&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;M2h21u9xKAPY9jPlC6bq&quot;,&quot;name&quot;:&quot;contact-form&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;,&quot;islands&quot;:[]},&quot;checksum&quot;:&quot;4d1402db8333a1d35478a5949dd63759c058ad5c93400ae7965f62f5c9d3acd3&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="M2h21u9xKAPY9jPlC6bq" wire:name="contact-form">
+                        <div wire:key="lw-3316153410-1-1-5" wire:snapshot="{&quot;data&quot;:{&quot;name&quot;:&quot;&quot;,&quot;email&quot;:&quot;&quot;,&quot;subject&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;,&quot;isSubmitted&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;TTjWw0c5MEewinl80r78&quot;,&quot;name&quot;:&quot;contact-form&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;,&quot;islands&quot;:[]},&quot;checksum&quot;:&quot;8cb6b2dadbd22231f99228fc30e8505ac29650bf9339ecf6f78699559b37c043&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="TTjWw0c5MEewinl80r78" wire:name="contact-form">
     <!--[if BLOCK]><![endif]-->        <form wire:submit="submit" class="space-y-4">
             <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -2684,11 +2458,11 @@
                         Quick Links
                     </h4>
                     <ul class="space-y-2 text-sm text-[#A1A1AA]">
-                        <li><a href="http://127.0.0.1:8005#about" class="hover:text-white transition">About</a></li>
-                        <li><a href="http://127.0.0.1:8005#skills" class="hover:text-white transition">Skills</a></li>
-                        <li><a href="http://127.0.0.1:8005#services" class="hover:text-white transition">Services</a></li>
-                        <li><a href="/portfolio/projects" class="hover:text-white transition">Portfolio</a></li>
-                        <li><a href="/portfolio/blog" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About</a></li>
+                        <li><a href="#skills" class="hover:text-white transition">Skills</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                        <li><a href="/portfolio/projects/" class="hover:text-white transition">Portfolio</a></li>
+                        <li><a href="/portfolio/blog/" class="hover:text-white transition">Blog</a></li>
                     </ul>
                 </div>
 
