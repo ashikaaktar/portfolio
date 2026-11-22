@@ -6,19 +6,33 @@ $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
 $kernel->bootstrap();
 
 $exportDir = __DIR__ . '/dist';
-if (is_dir($exportDir)) {
-    // Delete old
-    $files = new RecursiveIteratorIterator(
-        new RecursiveDirectoryIterator($exportDir, RecursiveDirectoryIterator::SKIP_DOTS),
-        RecursiveIteratorIterator::CHILD_FIRST
-    );
-    foreach ($files as $fileinfo) {
-        $todo = ($fileinfo->isDir() ? 'rmdir' : 'unlink');
-        $todo($fileinfo->getRealPath());
+if (!is_dir($exportDir)) {
+    mkdir($exportDir, 0777, true);
+} else {
+    // Clean old files except .git
+    foreach (scandir($exportDir) as $item) {
+        if ($item === '.' || $item === '..' || $item === '.git') continue;
+        $path = "$exportDir/$item";
+        if (is_dir($path)) {
+            $files = new RecursiveIteratorIterator(
+                new RecursiveDirectoryIterator($path, RecursiveDirectoryIterator::SKIP_DOTS),
+                RecursiveIteratorIterator::CHILD_FIRST
+            );
+            foreach ($files as $fileinfo) {
+                if ($fileinfo->isDir()) {
+                    @rmdir($fileinfo->getRealPath());
+                } else {
+                    @chmod($fileinfo->getRealPath(), 0777);
+                    @unlink($fileinfo->getRealPath());
+                }
+            }
+            @rmdir($path);
+        } else {
+            @chmod($path, 0777);
+            @unlink($path);
+        }
     }
-    rmdir($exportDir);
 }
-mkdir($exportDir, 0777, true);
 
 // Copy build directory
 function copyDir($src, $dst) {
@@ -53,6 +67,7 @@ file_put_contents("$exportDir/.nojekyll", "");
 $baseUrl = 'http://127.0.0.1:8005';
 $urlsToCrawl = [
     '/' => 'index.html',
+    '/?lang=bn' => 'bn/index.html',
     '/projects' => 'projects/index.html',
     '/blog' => 'blog/index.html',
 ];
@@ -78,21 +93,66 @@ foreach ($urlsToCrawl as $path => $destFile) {
     }
 
     // Replace absolute localhost URLs with base path for GitHub Pages (/portfolio/)
-    // We also make sure build/assets URLs are properly referenced.
     $html = str_replace(
-        ['http://127.0.0.1:8005/build/', 'http://127.0.0.1:8005/images/', 'http://127.0.0.1:8005/storage/', 'http://127.0.0.1:8005/'],
-        ['/portfolio/build/', '/portfolio/images/', '/portfolio/storage/', '/portfolio/'],
+        ['http://127.0.0.1:8005/build/', 'http://127.0.0.1:8005/images/', 'http://127.0.0.1:8005/storage/'],
+        ['/portfolio/build/', '/portfolio/images/', '/portfolio/storage/'],
         $html
     );
 
-    // Also handle relative references if any
+    // Replace route links
+    $html = str_replace(
+        ['http://127.0.0.1:8005/projects/', 'http://127.0.0.1:8005/projects', 'http://127.0.0.1:8005/blog/', 'http://127.0.0.1:8005/blog'],
+        ['/portfolio/projects/', '/portfolio/projects/', '/portfolio/blog/', '/portfolio/blog/'],
+        $html
+    );
+
+    // Replace language switcher links
+    $html = str_replace(
+        ['http://127.0.0.1:8005/locale/en', 'http://127.0.0.1:8005/locale/bn', 'href="/locale/en"', 'href="/locale/bn"'],
+        ['/portfolio/', '/portfolio/bn/', 'href="/portfolio/"', 'href="/portfolio/bn/"'],
+        $html
+    );
+
+    // If on index.html or bn/index.html, anchor links should be #section
+    if ($destFile === 'index.html' || $destFile === 'bn/index.html') {
+        $html = str_replace(
+            ['http://127.0.0.1:8005/#', 'http://127.0.0.1:8005#', '/portfolio/#', '/portfolio#'],
+            ['#', '#', '#', '#'],
+            $html
+        );
+    } else {
+        $html = str_replace(
+            ['http://127.0.0.1:8005/#', 'http://127.0.0.1:8005#'],
+            ['/portfolio/#', '/portfolio/#'],
+            $html
+        );
+    }
+
+    // Replace any remaining http://127.0.0.1:8005/ or http://127.0.0.1:8005
+    $html = str_replace(
+        ['http://127.0.0.1:8005/', 'http://127.0.0.1:8005'],
+        ['/portfolio/', '/portfolio/'],
+        $html
+    );
+
+    // Replace relative references if any
     $html = str_replace(
         ['href="/build/', 'src="/build/', 'href="/images/', 'src="/images/', 'href="/storage/', 'src="/storage/'],
         ['href="/portfolio/build/', 'src="/portfolio/build/', 'href="/portfolio/images/', 'src="/portfolio/images/', 'href="/portfolio/storage/', 'src="/portfolio/storage/'],
         $html
     );
 
-    // Remove broken Livewire 404 scripts on static export
+    // Replace URL-encoded share links
+    $html = str_replace(
+        'http%3A%2F%2F127.0.0.1%3A8005',
+        'https%3A%2F%2Fashikaaktar.github.io%2Fportfolio',
+        $html
+    );
+
+    // Remove Boost browser-logger script from static export to avoid 404/405 errors
+    $html = preg_replace('#<script id="browser-logger-active">.*?</script>#s', '', $html);
+
+    // Remove broken Livewire scripts on static export
     $html = preg_replace('#<script src="[^"]*livewire[^"]*"[^>]*></script>#i', '', $html);
 
     // Inject Alpine.js and Lucide Icons CDN so mobile menu, icons, and interactions work 100% on static export

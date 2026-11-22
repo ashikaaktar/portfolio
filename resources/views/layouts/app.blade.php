@@ -88,6 +88,10 @@
     </div>
 
     <!-- Navigation Header -->
+    @php
+        $isHome = request()->routeIs('home');
+        $homePrefix = $isHome ? '' : route('home');
+    @endphp
     <header x-data="{ mobileOpen: false, scrolled: false }" 
             x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 20 })"
             :class="{ 'bg-[#080B18]/90 backdrop-blur-xl border-b border-[#8B5CF6]/20 py-3 shadow-lg shadow-black/40': scrolled, 'bg-transparent py-5': !scrolled }"
@@ -95,7 +99,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between">
                 <!-- Brand Logo -->
-                <a href="{{ route('home') }}" class="flex items-center gap-2 group">
+                <a href="{{ $isHome ? '#home' : route('home') }}" class="flex items-center gap-2 group">
                     <div class="w-10 h-10 rounded-xl gradient-btn flex items-center justify-center font-extrabold text-lg text-white shadow-md shadow-[#8B5CF6]/30 group-hover:scale-105 transition-transform">
                         A
                     </div>
@@ -112,28 +116,28 @@
 
                 <!-- Desktop Navigation Menu -->
                 <nav class="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full glass-panel border border-white/10 shadow-inner">
-                    <a href="{{ route('home') }}#home" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="{{ $homePrefix }}#home" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         {{ __('portfolio.nav.home') }}
                     </a>
-                    <a href="{{ route('home') }}#about" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="{{ $homePrefix }}#about" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         {{ __('portfolio.nav.about') }}
                     </a>
-                    <a href="{{ route('home') }}#skills" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="{{ $homePrefix }}#skills" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         {{ __('portfolio.nav.skills') }}
                     </a>
-                    <a href="{{ route('home') }}#services" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="{{ $homePrefix }}#services" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         {{ __('portfolio.nav.services') }}
                     </a>
-                    <a href="{{ route('home') }}#portfolio" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="{{ $homePrefix }}#portfolio" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         {{ __('portfolio.nav.portfolio') }}
                     </a>
-                    <a href="{{ route('home') }}#experience" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="{{ $homePrefix }}#experience" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         {{ __('portfolio.nav.experience') }}
                     </a>
-                    <a href="{{ route('home') }}#blog" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="{{ $homePrefix }}#blog" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         {{ __('portfolio.nav.blog') }}
                     </a>
-                    <a href="{{ route('home') }}#contact" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
+                    <a href="{{ $homePrefix }}#contact" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#A1A1AA] hover:text-white hover:bg-white/10 transition">
                         {{ __('portfolio.nav.contact') }}
                     </a>
                 </nav>
@@ -155,7 +159,7 @@
                     </div>
 
                     <!-- Let's Talk CTA -->
-                    <a href="{{ route('home') }}#contact" class="px-5 py-2.5 rounded-xl gradient-btn text-xs font-bold text-white flex items-center gap-1.5 transition">
+                    <a href="{{ $homePrefix }}#contact" class="px-5 py-2.5 rounded-xl gradient-btn text-xs font-bold text-white flex items-center gap-1.5 transition">
                         <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
                         <span>{{ __('portfolio.nav.lets_talk') }}</span>
                     </a>
@@ -201,33 +205,33 @@
             @click.away="mobileOpen = false" 
             class="md:hidden glass-panel border-b border-[#8B5CF6]/20 px-6 py-6 mt-3 space-y-3 shadow-2xl"
             style="display: none;">
-            <a @click="mobileOpen = false" href="{{ route('home') }}#home" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="{{ $homePrefix }}#home" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 {{ __('portfolio.nav.home') }}
             </a>
-            <a @click="mobileOpen = false" href="{{ route('home') }}#about" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="{{ $homePrefix }}#about" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 {{ __('portfolio.nav.about') }}
             </a>
-            <a @click="mobileOpen = false" href="{{ route('home') }}#skills" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="{{ $homePrefix }}#skills" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 {{ __('portfolio.nav.skills') }}
             </a>
-            <a @click="mobileOpen = false" href="{{ route('home') }}#services" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="{{ $homePrefix }}#services" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 {{ __('portfolio.nav.services') }}
             </a>
-            <a @click="mobileOpen = false" href="{{ route('home') }}#portfolio" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="{{ $homePrefix }}#portfolio" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 {{ __('portfolio.nav.portfolio') }}
             </a>
-            <a @click="mobileOpen = false" href="{{ route('home') }}#experience" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="{{ $homePrefix }}#experience" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 {{ __('portfolio.nav.experience') }}
             </a>
-            <a @click="mobileOpen = false" href="{{ route('home') }}#blog" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="{{ $homePrefix }}#blog" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 {{ __('portfolio.nav.blog') }}
             </a>
-            <a @click="mobileOpen = false" href="{{ route('home') }}#contact" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
+            <a @click="mobileOpen = false" href="{{ $homePrefix }}#contact" class="block py-2 text-sm font-semibold text-[#A1A1AA] hover:text-[#EC4899] border-b border-white/5">
                 {{ __('portfolio.nav.contact') }}
             </a>
 
             <div class="pt-2">
-                <a @click="mobileOpen = false" href="{{ route('home') }}#contact" class="w-full py-3 rounded-xl gradient-btn text-center text-sm font-bold text-white flex items-center justify-center gap-2">
+                <a @click="mobileOpen = false" href="{{ $homePrefix }}#contact" class="w-full py-3 rounded-xl gradient-btn text-center text-sm font-bold text-white flex items-center justify-center gap-2">
                     <i data-lucide="message-square" class="w-4 h-4"></i>
                     <span>{{ __('portfolio.nav.lets_talk') }}</span>
                 </a>
@@ -296,9 +300,9 @@
                         {{ __('portfolio.footer.quick_links') }}
                     </h4>
                     <ul class="space-y-2 text-sm text-[#A1A1AA]">
-                        <li><a href="{{ route('home') }}#about" class="hover:text-white transition">{{ __('portfolio.nav.about') }}</a></li>
-                        <li><a href="{{ route('home') }}#skills" class="hover:text-white transition">{{ __('portfolio.nav.skills') }}</a></li>
-                        <li><a href="{{ route('home') }}#services" class="hover:text-white transition">{{ __('portfolio.nav.services') }}</a></li>
+                        <li><a href="{{ $homePrefix }}#about" class="hover:text-white transition">{{ __('portfolio.nav.about') }}</a></li>
+                        <li><a href="{{ $homePrefix }}#skills" class="hover:text-white transition">{{ __('portfolio.nav.skills') }}</a></li>
+                        <li><a href="{{ $homePrefix }}#services" class="hover:text-white transition">{{ __('portfolio.nav.services') }}</a></li>
                         <li><a href="{{ route('projects') }}" class="hover:text-white transition">{{ __('portfolio.nav.portfolio') }}</a></li>
                         <li><a href="{{ route('blog') }}" class="hover:text-white transition">{{ __('portfolio.nav.blog') }}</a></li>
                     </ul>
